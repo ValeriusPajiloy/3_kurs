@@ -36,10 +36,10 @@
         {
             get
             {
-                if (string.IsNullOrWhiteSpace(FirstName)) return false;
-                if (string.IsNullOrWhiteSpace(MiddleName)) return false;
-                if (string.IsNullOrWhiteSpace(LastName)) return false;
-                if (string.IsNullOrWhiteSpace(position)) return false;
+                if (string.IsNullOrWhiteSpace(FirstName) || FirstName =="Имя") return false;
+                if (string.IsNullOrWhiteSpace(MiddleName) || MiddleName == "Отчество") return false;
+                if (string.IsNullOrWhiteSpace(LastName) || LastName == "Фамилия") return false;
+                if (string.IsNullOrWhiteSpace(position)|| position == "Должность") return false;
                 if (exp < 0) return false;
                 if (Degree == null) return false;
                 return true;

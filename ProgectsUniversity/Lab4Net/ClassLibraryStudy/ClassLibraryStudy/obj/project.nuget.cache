@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7eBKhw+MtOufSxvATdlZ5DbB9VqxbOFUGc4vlpGvYdEPs0oZ13WQ2azO3cD0XhMNegENwWF7qnjANsYaS4R/eA==",
+  "dgSpecHash": "+xn6lBHM2yGgbVfBvCoj5kBHqRLRExendFAU0UstG0xvoWQREAocg8ExkwJOWxkRHp33He3kAHFKuaJuN1TC9Q==",
   "success": true,
-  "projectFilePath": "D:\\Валера\\ProgectsUniversity\\Lab4Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
+  "projectFilePath": "D:\\LebedevProject\\3_kurs\\ProgectsUniversity\\Lab4Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Valer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Valer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

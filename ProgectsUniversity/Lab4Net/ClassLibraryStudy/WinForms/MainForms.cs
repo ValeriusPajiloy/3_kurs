@@ -24,9 +24,37 @@ namespace WinForms
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TeacherForm f2 = new TeacherForm(this.teacher);
+            if (this.teacher != null)
+            {
+                TeacherForm f2 = new TeacherForm(this.teacher);
+                f2.Show();
+                this.teacher = f2.teacher;
+            }
+            else
+            {
+                MessageBox.Show("Ошибка! Сначала добавьте преподователей", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error) ;
+            }
+        }
+
+        private void добавитьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DisciplineForm f2 = new DisciplineForm();
             f2.Show();
-            this.teacher = f2.teacher;
+            this.discipline = f2.discipline;
+        }
+
+        private void изменитьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if(this.discipline != null)
+            {
+                DisciplineForm f2 = new DisciplineForm(this.discipline);
+                f2.Show();
+                this.discipline = f2.discipline;
+            }
+            else
+            {
+                MessageBox.Show("Ошибка! Сначала добавьте предметы", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

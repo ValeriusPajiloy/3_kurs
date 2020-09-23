@@ -166,8 +166,10 @@
             this.Controls.Add(this.textBoxMiddleName);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.textBoxSurname);
+            this.MaximumSize = new System.Drawing.Size(430, 246);
+            this.MinimumSize = new System.Drawing.Size(430, 246);
             this.Name = "TeacherForm";
-            this.Text = "TeacherForm";
+            this.Text = "Преподаватель";
             ((System.ComponentModel.ISupportInitialize)(this.numericExp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

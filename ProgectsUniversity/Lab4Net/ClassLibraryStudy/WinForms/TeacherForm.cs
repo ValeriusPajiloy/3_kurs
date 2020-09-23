@@ -167,7 +167,7 @@ namespace WinForms
             teacher.LastName = textBoxSurname.Text;
             teacher.FirstName = textBoxName.Text;
             teacher.MiddleName = textBoxMiddleName.Text;
-            teacher.Degree.subject = (Subject)comboBoxSubject.SelectedItem;
+            if (comboBoxSubject.SelectedValue != null) teacher.Degree.subject = (Subject)comboBoxSubject.SelectedItem;
             teacher.Degree.degree = textBoxDegree.Text;
             teacher.position = textBoxPosition.Text;
             teacher.exp = (int)numericExp.Value;
