@@ -1,0 +1,10 @@
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\bin\Debug\WindowsFormsLab3.exe.config
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\bin\Debug\WindowsFormsLab3.exe
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\bin\Debug\WindowsFormsLab3.pdb
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\obj\Debug\WindowsFormsLab3.csprojAssemblyReference.cache
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\obj\Debug\WindowsFormsLab3.Form1.resources
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\obj\Debug\WindowsFormsLab3.Properties.Resources.resources
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\obj\Debug\WindowsFormsLab3.csproj.GenerateResource.cache
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\obj\Debug\WindowsFormsLab3.csproj.CoreCompileInputs.cache
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\obj\Debug\WindowsFormsLab3.exe
+D:\Валера\ProgectsUniversity\WindowsFormsLab3\WindowsFormsLab3\obj\Debug\WindowsFormsLab3.pdb
