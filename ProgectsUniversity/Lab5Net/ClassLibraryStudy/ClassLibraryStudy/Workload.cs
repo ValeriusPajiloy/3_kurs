@@ -30,10 +30,11 @@
 
         }
 
-        public Workload(Teacher teacher, Discipline discipline)
+        public Workload(Teacher teacher, Discipline discipline, string groupeName)
         {
             this.teacher = teacher;
             this.discipline = discipline;
+            this.groupName = groupName;
         }
 
     }
