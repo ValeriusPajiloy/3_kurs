@@ -36,6 +36,9 @@
             this.Exp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPageDisciplines = new System.Windows.Forms.TabPage();
+            this.listViewSubject = new System.Windows.Forms.ListView();
+            this.SubjectColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CountHoursColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPageWorkLoad = new System.Windows.Forms.TabPage();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,12 +52,14 @@
             this.добавитьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.listViewSubject = new System.Windows.Forms.ListView();
-            this.SubjectColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CountHoursColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.FIOTeach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.disciplineW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameGroupe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl.SuspendLayout();
             this.tabPageTeachers.SuspendLayout();
             this.tabPageDisciplines.SuspendLayout();
+            this.tabPageWorkLoad.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,16 +128,42 @@
             this.tabPageDisciplines.Location = new System.Drawing.Point(4, 22);
             this.tabPageDisciplines.Name = "tabPageDisciplines";
             this.tabPageDisciplines.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDisciplines.Size = new System.Drawing.Size(599, 321);
+            this.tabPageDisciplines.Size = new System.Drawing.Size(599, 326);
             this.tabPageDisciplines.TabIndex = 1;
             this.tabPageDisciplines.Text = "Предметы";
             this.tabPageDisciplines.UseVisualStyleBackColor = true;
             // 
+            // listViewSubject
+            // 
+            this.listViewSubject.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.SubjectColumn,
+            this.CountHoursColumn});
+            this.listViewSubject.FullRowSelect = true;
+            this.listViewSubject.GridLines = true;
+            this.listViewSubject.HideSelection = false;
+            this.listViewSubject.Location = new System.Drawing.Point(3, 3);
+            this.listViewSubject.Name = "listViewSubject";
+            this.listViewSubject.Size = new System.Drawing.Size(594, 315);
+            this.listViewSubject.TabIndex = 1;
+            this.listViewSubject.UseCompatibleStateImageBehavior = false;
+            this.listViewSubject.View = System.Windows.Forms.View.Details;
+            // 
+            // SubjectColumn
+            // 
+            this.SubjectColumn.Text = "Предмет";
+            this.SubjectColumn.Width = 509;
+            // 
+            // CountHoursColumn
+            // 
+            this.CountHoursColumn.Text = "Кол-во часов";
+            this.CountHoursColumn.Width = 79;
+            // 
             // tabPageWorkLoad
             // 
+            this.tabPageWorkLoad.Controls.Add(this.listView1);
             this.tabPageWorkLoad.Location = new System.Drawing.Point(4, 22);
             this.tabPageWorkLoad.Name = "tabPageWorkLoad";
-            this.tabPageWorkLoad.Size = new System.Drawing.Size(599, 321);
+            this.tabPageWorkLoad.Size = new System.Drawing.Size(599, 326);
             this.tabPageWorkLoad.TabIndex = 2;
             this.tabPageWorkLoad.Text = "Нагрузка";
             this.tabPageWorkLoad.UseVisualStyleBackColor = true;
@@ -148,8 +179,9 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // преподавательToolStripMenuItem
             // 
@@ -186,14 +218,14 @@
             // добавитьToolStripMenuItem1
             // 
             this.добавитьToolStripMenuItem1.Name = "добавитьToolStripMenuItem1";
-            this.добавитьToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.добавитьToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.добавитьToolStripMenuItem1.Text = "Добавить";
             this.добавитьToolStripMenuItem1.Click += new System.EventHandler(this.добавитьToolStripMenuItem1_Click);
             // 
             // изменитьToolStripMenuItem1
             // 
             this.изменитьToolStripMenuItem1.Name = "изменитьToolStripMenuItem1";
-            this.изменитьToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.изменитьToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.изменитьToolStripMenuItem1.Text = "Изменить";
             this.изменитьToolStripMenuItem1.Click += new System.EventHandler(this.изменитьToolStripMenuItem1_Click);
             // 
@@ -231,30 +263,36 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // listViewSubject
+            // listView1
             // 
-            this.listViewSubject.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.SubjectColumn,
-            this.CountHoursColumn});
-            this.listViewSubject.FullRowSelect = true;
-            this.listViewSubject.GridLines = true;
-            this.listViewSubject.HideSelection = false;
-            this.listViewSubject.Location = new System.Drawing.Point(3, 3);
-            this.listViewSubject.Name = "listViewSubject";
-            this.listViewSubject.Size = new System.Drawing.Size(594, 315);
-            this.listViewSubject.TabIndex = 1;
-            this.listViewSubject.UseCompatibleStateImageBehavior = false;
-            this.listViewSubject.View = System.Windows.Forms.View.Details;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FIOTeach,
+            this.disciplineW,
+            this.nameGroupe});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(1, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(596, 320);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // SubjectColumn
+            // FIOTeach
             // 
-            this.SubjectColumn.Text = "Предмет";
-            this.SubjectColumn.Width = 509;
+            this.FIOTeach.Text = "ФИО преподавателя";
+            this.FIOTeach.Width = 203;
             // 
-            // CountHoursColumn
+            // disciplineW
             // 
-            this.CountHoursColumn.Text = "Кол-во часов";
-            this.CountHoursColumn.Width = 79;
+            this.disciplineW.Text = "Дисциплина";
+            this.disciplineW.Width = 213;
+            // 
+            // nameGroupe
+            // 
+            this.nameGroupe.Text = "Группа";
+            this.nameGroupe.Width = 105;
             // 
             // MainForms
             // 
@@ -269,6 +307,7 @@
             this.tabControl.ResumeLayout(false);
             this.tabPageTeachers.ResumeLayout(false);
             this.tabPageDisciplines.ResumeLayout(false);
+            this.tabPageWorkLoad.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -301,6 +340,10 @@
         private System.Windows.Forms.ListView listViewSubject;
         private System.Windows.Forms.ColumnHeader SubjectColumn;
         private System.Windows.Forms.ColumnHeader CountHoursColumn;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader FIOTeach;
+        private System.Windows.Forms.ColumnHeader disciplineW;
+        private System.Windows.Forms.ColumnHeader nameGroupe;
     }
 }
 

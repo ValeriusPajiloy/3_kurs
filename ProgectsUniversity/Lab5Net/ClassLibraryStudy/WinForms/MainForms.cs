@@ -50,11 +50,17 @@ namespace WinForms
                 DisciplineForm f2 = new DisciplineForm(this.discipline);
                 f2.Show();
                 this.discipline = f2.discipline;
+                
             }
             else
             {
                 MessageBox.Show("Ошибка! Сначала добавьте предметы", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

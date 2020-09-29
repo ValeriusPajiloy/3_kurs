@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ClassLibraryStudy
 {
-    class Univer
+    public class Univer
     {
         public static Dictionary<int, Teacher> Teachers { get; } = new Dictionary<int, Teacher>();
 
