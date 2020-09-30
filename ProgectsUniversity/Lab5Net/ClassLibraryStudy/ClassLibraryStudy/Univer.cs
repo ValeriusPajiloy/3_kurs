@@ -5,7 +5,7 @@ namespace ClassLibraryStudy
 {
     public class Univer
     {
-        public static Dictionary<int, Teacher> Teachers { get; } = new Dictionary<int, Teacher>();
+        public static Di    ctionary<int, Teacher> Teachers { get; } = new Dictionary<int, Teacher>();
 
         public static Dictionary<int, Discipline> Disciplines { get; } = new Dictionary<int, Discipline>();
 
