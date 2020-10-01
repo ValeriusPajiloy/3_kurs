@@ -28,7 +28,22 @@ namespace Lab2TAF
         public bool isSimbol(char temp)
         {
             bool simbol = false;
-            string simbols = "+-*/=^:%&()";
+            string simbols = "+-*/=<>;^:%&() \t\r\n";
+
+            foreach (char y in simbols)
+            {
+                if (temp == y)
+                {
+                    simbol = true;
+                    break;
+                }
+            }
+            return simbol;
+        }
+        public bool isSpecialSimbol(char temp)
+        {
+            bool simbol = false;
+            string simbols = "=<>:";
 
             foreach (char y in simbols)
             {
@@ -89,7 +104,19 @@ namespace Lab2TAF
             int intNum;
             double doubleNum;
 
-            if (int.TryParse(tempStr, out intNum))
+            if (tempStr == "do" || tempStr == "while")
+            {
+                type = "operator of cycle";
+            }
+            else if(tempStr == "<=" || tempStr == "=>" || tempStr == "=" || tempStr == "<" || tempStr == ">")
+            {
+                type = "operator of comparison";
+            }
+            else if (tempStr == ":=")
+            {
+                type = "operator of assignment";
+            }
+            else if (int.TryParse(tempStr, out intNum))
             {
                 type = "int";
             }
@@ -120,12 +147,13 @@ namespace Lab2TAF
 
                 temp = inputText[i];
 
-                if (temp == ' ')
-                {
-                    continue;
-                }
+                //if (temp == ' ')
+                //{
+                //    tempStr = "";
+                //    continue;
+                //}
 
-                if ((isSimbol(temp)) || (i + 1 == inputText.Length))
+                if ((isSimbol(temp)) || (i + 1 == inputText.Length) || temp == ' ')
                 {
 
 
@@ -134,18 +162,21 @@ namespace Lab2TAF
                         tempStr += temp;
                     }
 
-                    if (tempStr != "")
+                    if (tempStr != "" && !isSpecialSimbol(temp))
                     {
+                        lexem tempLexem;
+                        tempLexem.id = tempStr;
+                        tempLexem.type = getType(tempStr);
+ 
                         if (isNewLexem(tempStr, lexemsWhithoutRepeate))
                         {
-                            lexem tempLexem;
-                            tempLexem.id = tempStr;
-                            tempLexem.type = getType(tempStr);
-
                             if (tempLexem.type!="err")
                             {
                                 lexemsWhithoutRepeate.Add(tempLexem);
-                                outputText += "<id" + Convert.ToString(lexemsWhithoutRepeate.Count - 1) + ">";
+                                if (tempLexem.type != "operator of cycle" && tempLexem.type != "operator of assignment" && tempLexem.type != "operator of comparison")
+                                    outputText += "<id" + Convert.ToString(lexemsWhithoutRepeate.Count - 1) + ">";
+                                else
+                                    outputText += tempStr;
                             }
                             else
                             {
@@ -158,20 +189,64 @@ namespace Lab2TAF
                         }
                         else
                         {
-                            outputText += "<id" + Convert.ToString(findLexem(tempStr, lexemsWhithoutRepeate)) + ">";
+                            if (tempLexem.type != "operator of cycle" && tempLexem.type != "operator of assignment" && tempLexem.type != "operator of comparison")
+                                outputText += "<id" + Convert.ToString(findLexem(tempStr, lexemsWhithoutRepeate)) + ">";
                         }
                     }
 
 
                     if (isSimbol(temp))
                     {
-                        outputText += temp;
+                        if (isSpecialSimbol(temp))
+                        {
+                            if (tempStr.Length == 0)
+                            {
+                                tempStr += temp;
+                            }
+                            else if (isSpecialSimbol(tempStr[tempStr.Length - 1]))
+                            {
+                                tempStr += temp;
+                                if (isNewLexem(tempStr, lexemsWhithoutRepeate))
+                                {
+                                    lexem tempLexem;
+                                    tempLexem.id = tempStr;
+                                    tempLexem.type = getType(tempStr);
+
+                                    if (tempLexem.type != "err")
+                                    {
+                                        lexemsWhithoutRepeate.Add(tempLexem);
+                                        outputText += tempStr;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Invalid input", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        outputText = "";
+                                        lexemsWhithoutRepeate.Clear();
+                                        tempStr = "";
+                                        break;
+                                    }
+                                }
+                                else
+                                {
+                                    outputText += tempStr;
+                                }
+                            }
+                            continue;
+                        }
+                        else
+                        {
+                            outputText += temp;
+                        }
                     }
+                   
                     tempStr = "";
 
                 }
                 else
                 {
+                    if (tempStr.Length!=0)
+                        if (isSpecialSimbol(tempStr[tempStr.Length - 1])) 
+                            tempStr = "";
                     tempStr += temp;
                 }
 
@@ -225,11 +300,12 @@ namespace Lab2TAF
             lexemsWhithoutRepeate = new List<lexem>();
             dataGridView1.ColumnCount = 3;
             dataGridView1.Columns[0].Name = "Номер";
-            dataGridView1.Columns[0].Width = 100;
+            dataGridView1.Columns[0].Width = 180;
             dataGridView1.Columns[1].Name = "Идентификатор";
-            dataGridView1.Columns[1].Width = 100;
+            dataGridView1.Columns[1].Width = 180;
             dataGridView1.Columns[2].Name = "Значение";
-            dataGridView1.Columns[2].Width = 185;
+            dataGridView1.Columns[2].Width = 388;
+
         }
     }
 }

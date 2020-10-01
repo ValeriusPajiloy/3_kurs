@@ -1,0 +1,10 @@
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\bin\Debug\LabTAF.exe.config
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\bin\Debug\LabTAF.exe
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\bin\Debug\LabTAF.pdb
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csprojAssemblyReference.cache
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\Lab2TAF.Form1.resources
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.Properties.Resources.resources
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csproj.GenerateResource.cache
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csproj.CoreCompileInputs.cache
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.exe
+D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.pdb
