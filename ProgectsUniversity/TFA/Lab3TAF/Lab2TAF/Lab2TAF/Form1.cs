@@ -106,7 +106,7 @@ namespace Lab2TAF
 
             if (tempStr == "do" || tempStr == "while")
             {
-                type = "operator of cycle";
+                type = "operator of loop";
             }
             else if(tempStr == "<=" || tempStr == "=>" || tempStr == "=" || tempStr == "<" || tempStr == ">")
             {
@@ -173,7 +173,7 @@ namespace Lab2TAF
                             if (tempLexem.type!="err")
                             {
                                 lexemsWhithoutRepeate.Add(tempLexem);
-                                if (tempLexem.type != "operator of cycle" && tempLexem.type != "operator of assignment" && tempLexem.type != "operator of comparison")
+                                if (tempLexem.type != "operator of loop" && tempLexem.type != "operator of assignment" && tempLexem.type != "operator of comparison")
                                     outputText += "<id" + Convert.ToString(lexemsWhithoutRepeate.Count - 1) + ">";
                                 else
                                     outputText += tempStr;
@@ -189,7 +189,7 @@ namespace Lab2TAF
                         }
                         else
                         {
-                            if (tempLexem.type != "operator of cycle" && tempLexem.type != "operator of assignment" && tempLexem.type != "operator of comparison")
+                            if (tempLexem.type != "operator of loop" && tempLexem.type != "operator of assignment" && tempLexem.type != "operator of comparison")
                                 outputText += "<id" + Convert.ToString(findLexem(tempStr, lexemsWhithoutRepeate)) + ">";
                         }
                     }

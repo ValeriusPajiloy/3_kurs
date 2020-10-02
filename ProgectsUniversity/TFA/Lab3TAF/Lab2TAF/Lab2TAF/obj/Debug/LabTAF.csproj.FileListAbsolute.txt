@@ -8,3 +8,13 @@ D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debu
 D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csproj.CoreCompileInputs.cache
 D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.exe
 D:\LebedevProject\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.pdb
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\bin\Debug\LabTAF.exe.config
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\bin\Debug\LabTAF.exe
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\bin\Debug\LabTAF.pdb
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csprojAssemblyReference.cache
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\Lab2TAF.Form1.resources
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.Properties.Resources.resources
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csproj.GenerateResource.cache
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csproj.CoreCompileInputs.cache
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.exe
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.pdb
