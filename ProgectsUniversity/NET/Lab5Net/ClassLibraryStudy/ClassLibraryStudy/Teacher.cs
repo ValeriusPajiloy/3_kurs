@@ -2,6 +2,26 @@
 {
     public class Teacher : IValidatable
     {
+
+        /// <summary>
+        /// Уникальный идентификатор нового преподаватель (аналог автоинкремента)
+        /// </summary>
+        private static int _newTeacherId;
+
+        private static int NewTeacherId
+        {
+            get
+            {
+                _newTeacherId++;
+                return _newTeacherId;
+            }
+        }
+
+
+        /// <summary>
+        /// Уникальный идентификатор клиента
+        /// </summary>
+        public int TeacherId { get; }
         /// <summary>
         /// Имя
         /// </summary>
@@ -48,7 +68,7 @@
 
         public Teacher()
         {
-
+            TeacherId = NewTeacherId;
         }
 
         public Teacher(string FirstName, string MiddleName, string LastName, scienceDegree Degree, int exp, string position)
@@ -59,6 +79,8 @@
             this.Degree = Degree;
             this.exp = exp;
             this.position = position;
+            TeacherId = NewTeacherId;
+
         }
         public override string ToString()
         {

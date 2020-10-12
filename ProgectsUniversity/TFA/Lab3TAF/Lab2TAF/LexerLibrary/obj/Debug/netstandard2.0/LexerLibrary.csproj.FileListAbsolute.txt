@@ -1,0 +1,9 @@
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\bin\Debug\netstandard2.0\LexerLibrary.deps.json
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\bin\Debug\netstandard2.0\LexerLibrary.dll
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\bin\Debug\netstandard2.0\LexerLibrary.pdb
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\obj\Debug\netstandard2.0\LexerLibrary.csprojAssemblyReference.cache
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\obj\Debug\netstandard2.0\LexerLibrary.AssemblyInfoInputs.cache
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\obj\Debug\netstandard2.0\LexerLibrary.AssemblyInfo.cs
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\obj\Debug\netstandard2.0\LexerLibrary.csproj.CoreCompileInputs.cache
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\obj\Debug\netstandard2.0\LexerLibrary.dll
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\LexerLibrary\obj\Debug\netstandard2.0\LexerLibrary.pdb

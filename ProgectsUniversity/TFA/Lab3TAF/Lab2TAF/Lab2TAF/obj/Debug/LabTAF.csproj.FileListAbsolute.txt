@@ -18,3 +18,6 @@ D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csproj.CoreCompileInputs.cache
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.exe
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.pdb
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\bin\Debug\LexerLibrary.dll
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\bin\Debug\LexerLibrary.pdb
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\TFA\Lab3TAF\Lab2TAF\Lab2TAF\obj\Debug\LabTAF.csproj.CopyComplete

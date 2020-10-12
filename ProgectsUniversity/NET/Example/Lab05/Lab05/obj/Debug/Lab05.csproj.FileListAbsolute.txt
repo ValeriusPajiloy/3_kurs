@@ -1,0 +1,15 @@
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\bin\Debug\Lab05.exe.config
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\bin\Debug\Lab05.exe
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\bin\Debug\Lab05.pdb
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\bin\Debug\ClassLibraryHotel.dll
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\bin\Debug\ClassLibraryHotel.pdb
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.csprojResolveAssemblyReference.cache
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.FormClient.resources
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.FormMain.resources
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.FormRoom.resources
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.FormSettlement.resources
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.Properties.Resources.resources
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.csproj.GenerateResource.Cache
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.csproj.CoreCompileInputs.cache
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.exe
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\Lab05\obj\Debug\Lab05.pdb

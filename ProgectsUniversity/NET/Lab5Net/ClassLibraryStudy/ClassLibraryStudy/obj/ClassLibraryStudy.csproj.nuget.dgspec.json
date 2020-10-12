@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj": {}
+    "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj": {}
   },
   "projects": {
-    "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj": {
+    "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
+        "projectUniqueName": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
         "projectName": "ClassLibraryStudy",
-        "projectPath": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
+        "projectPath": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
         "packagesPath": "C:\\Users\\Valer\\.nuget\\packages\\",
-        "outputPath": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\obj\\",
+        "outputPath": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

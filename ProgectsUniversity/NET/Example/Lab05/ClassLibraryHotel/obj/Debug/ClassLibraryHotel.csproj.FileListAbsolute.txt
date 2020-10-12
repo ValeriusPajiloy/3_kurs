@@ -1,0 +1,12 @@
+F:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\04\Example\Lab04\ClassLibraryHotel\bin\Debug\ClassLibraryHotel.dll
+F:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\04\Example\Lab04\ClassLibraryHotel\bin\Debug\ClassLibraryHotel.pdb
+F:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\04\Example\Lab04\ClassLibraryHotel\obj\Debug\ClassLibraryHotel.csprojResolveAssemblyReference.cache
+F:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\04\Example\Lab04\ClassLibraryHotel\obj\Debug\ClassLibraryHotel.csproj.CoreCompileInputs.cache
+F:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\04\Example\Lab04\ClassLibraryHotel\obj\Debug\ClassLibraryHotel.dll
+F:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\04\Example\Lab04\ClassLibraryHotel\obj\Debug\ClassLibraryHotel.pdb
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\ClassLibraryHotel\bin\Debug\ClassLibraryHotel.dll
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\ClassLibraryHotel\bin\Debug\ClassLibraryHotel.pdb
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\ClassLibraryHotel\obj\Debug\ClassLibraryHotel.csprojResolveAssemblyReference.cache
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\ClassLibraryHotel\obj\Debug\ClassLibraryHotel.csproj.CoreCompileInputs.cache
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\ClassLibraryHotel\obj\Debug\ClassLibraryHotel.dll
+f:\MyDocs\Рабочая\БГТУ\_Преподавание\Дневное\.NET\Бакалавры\Labs\05\Example\Lab05\ClassLibraryHotel\obj\Debug\ClassLibraryHotel.pdb

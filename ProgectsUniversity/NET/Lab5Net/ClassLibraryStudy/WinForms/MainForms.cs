@@ -7,14 +7,27 @@ namespace WinForms
     public partial class MainForms : Form
     {
 
-        private Teacher teacher;
+        private Teacher teacher;    
         private Discipline discipline;
 
         public MainForms()
         {
             InitializeComponent();
         }
+        void updateListTeacher()
+        {
 
+        }
+        
+        void updateListDiscipline()
+        {
+
+        }
+
+        void updateListWorkLoad()
+        {
+
+        }
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TeacherForm f2 = new TeacherForm();

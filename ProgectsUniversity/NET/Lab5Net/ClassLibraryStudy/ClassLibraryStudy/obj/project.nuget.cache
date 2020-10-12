@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q162H1ldK/vt69fDzpU8Pl/LdVTFftb+MV8Aeirj8MuG3xGN9NwFLNn3dARxs75ZY9wxDlPhbfoS0UTzUwGqkA==",
+  "dgSpecHash": "1vZqgq6zpCc7JrUc4bmtTtuHZsUe0OK+EyGM99bICKc9GiLIIdsI3za1Jto8fsa/ZvcO5NzQSHIOLTJGgRxXlQ==",
   "success": true,
-  "projectFilePath": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
+  "projectFilePath": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab5Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Valer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Valer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

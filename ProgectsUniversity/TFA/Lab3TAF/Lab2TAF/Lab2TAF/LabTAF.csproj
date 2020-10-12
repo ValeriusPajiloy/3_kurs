@@ -80,5 +80,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LexerLibrary\LexerLibrary.csproj">
+      <Project>{7843a67a-3d8b-4a2f-8b68-c7559270d812}</Project>
+      <Name>LexerLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

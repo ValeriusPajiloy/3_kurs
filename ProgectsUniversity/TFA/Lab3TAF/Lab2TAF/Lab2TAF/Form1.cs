@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using LexerLibrary;
+using System.IO;
 
 namespace Lab2TAF
 {
@@ -25,38 +21,9 @@ namespace Lab2TAF
             InitializeComponent();
         }
 
-        public bool isSimbol(char temp)
-        {
-            bool simbol = false;
-            string simbols = "+-*/=<>;^:%&() \t\r\n";
+       
 
-            foreach (char y in simbols)
-            {
-                if (temp == y)
-                {
-                    simbol = true;
-                    break;
-                }
-            }
-            return simbol;
-        }
-        public bool isSpecialSimbol(char temp)
-        {
-            bool simbol = false;
-            string simbols = "=<>:";
-
-            foreach (char y in simbols)
-            {
-                if (temp == y)
-                {
-                    simbol = true;
-                    break;
-                }
-            }
-            return simbol;
-        }
-
-        public bool isNewLexem(string tempStr, List<lexem> lexemsWhithoutRepeate)
+        public bool isNewLexem(Lexer l, List<lexem> lexemsWhithoutRepeate)
         {
             bool isNew = true;
 
@@ -64,7 +31,7 @@ namespace Lab2TAF
             {
                 foreach (lexem y in lexemsWhithoutRepeate)
                 {
-                    if (tempStr == y.id)
+                    if (l.TokenContents == y.id)
                     {
                         isNew = false;
                         break;
@@ -89,171 +56,45 @@ namespace Lab2TAF
             return number;
         }
 
-        public bool isVariable(string tempStr)
-        {
-            foreach(char y in tempStr)
-            {
-                if (y == '.' || y == ',' || y == '\\' || y == '/') return false;
-            }
-            return true;
-        }
-
-        public string getType(string tempStr)
-        {
-            string type = "";
-            int intNum;
-            double doubleNum;
-
-            if (tempStr == "do" || tempStr == "while")
-            {
-                type = "operator of loop";
-            }
-            else if(tempStr == "<=" || tempStr == "=>" || tempStr == "=" || tempStr == "<" || tempStr == ">")
-            {
-                type = "operator of comparison";
-            }
-            else if (tempStr == ":=")
-            {
-                type = "operator of assignment";
-            }
-            else if (int.TryParse(tempStr, out intNum))
-            {
-                type = "int";
-            }
-            else if (double.TryParse(tempStr, out doubleNum))
-            {
-                type = "double";
-            }
-            else if (isVariable(tempStr))
-            {
-                type = "variable";
-            }
-            else
-            {
-                type = "err";
-            }
-
-            return type;
-        }
+       
         public string parser(string inputText)
         {
             lexemsWhithoutRepeate.Clear();
             string outputText = "";
-            string tempStr = "";
-            char temp = ' ';
-
-            for (int i = 0; i < inputText.Length; i++)
+          
+            var defs = new TokenDefinition[]
             {
+                new TokenDefinition(@"^do$", "OPERATOR LOOP"),
+                new TokenDefinition(@"^while$", "OPERATOR LOOP"),
+                new TokenDefinition(@"([""'])(?:\\\1|.)*?\1", "QUOTED-STRING"),
+                new TokenDefinition(@"[-+]?\d*\.\d+([eE][-+]?\d+)?", "FLOAT"),
+                new TokenDefinition(@"[-+]?\d+", "INT"),
+                new TokenDefinition(@"#t", "TRUE"),
+                new TokenDefinition(@"#f", "FALSE"),
+                new TokenDefinition(@"[*<>\?\-+/A-Za-z->!]+", "VARIABLE"),
+                new TokenDefinition(@"\.", "DOT"),
+                new TokenDefinition(@"\(", "LEFT"),
+                new TokenDefinition(@"\)", "RIGHT"),
+                new TokenDefinition(@"\s", "SPACE")
+            };
 
-                temp = inputText[i];
-
-                //if (temp == ' ')
-                //{
-                //    tempStr = "";
-                //    continue;
-                //}
-
-                if ((isSimbol(temp)) || (i + 1 == inputText.Length) || temp == ' ')
+            TextReader r = new StringReader(inputText);
+            Lexer l = new Lexer(r, defs);
+            
+            while (l.Next())
+            {
+                if (isNewLexem(l, lexemsWhithoutRepeate))
                 {
-
-
-                    if (i + 1 == inputText.Length && !isSimbol(temp))
-                    {
-                        tempStr += temp;
-                    }
-
-                    if (tempStr != "" && !isSpecialSimbol(temp))
-                    {
-                        lexem tempLexem;
-                        tempLexem.id = tempStr;
-                        tempLexem.type = getType(tempStr);
- 
-                        if (isNewLexem(tempStr, lexemsWhithoutRepeate))
-                        {
-                            if (tempLexem.type!="err")
-                            {
-                                lexemsWhithoutRepeate.Add(tempLexem);
-                                if (tempLexem.type != "operator of loop" && tempLexem.type != "operator of assignment" && tempLexem.type != "operator of comparison")
-                                    outputText += "<id" + Convert.ToString(lexemsWhithoutRepeate.Count - 1) + ">";
-                                else
-                                    outputText += tempStr;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Invalid input", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                outputText = "";
-                                lexemsWhithoutRepeate.Clear();
-                                tempStr = "";
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            if (tempLexem.type != "operator of loop" && tempLexem.type != "operator of assignment" && tempLexem.type != "operator of comparison")
-                                outputText += "<id" + Convert.ToString(findLexem(tempStr, lexemsWhithoutRepeate)) + ">";
-                        }
-                    }
-
-
-                    if (isSimbol(temp))
-                    {
-                        if (isSpecialSimbol(temp))
-                        {
-                            if (tempStr.Length == 0)
-                            {
-                                tempStr += temp;
-                            }
-                            else if (isSpecialSimbol(tempStr[tempStr.Length - 1]))
-                            {
-                                tempStr += temp;
-                                if (isNewLexem(tempStr, lexemsWhithoutRepeate))
-                                {
-                                    lexem tempLexem;
-                                    tempLexem.id = tempStr;
-                                    tempLexem.type = getType(tempStr);
-
-                                    if (tempLexem.type != "err")
-                                    {
-                                        lexemsWhithoutRepeate.Add(tempLexem);
-                                        outputText += tempStr;
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Invalid input", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                        outputText = "";
-                                        lexemsWhithoutRepeate.Clear();
-                                        tempStr = "";
-                                        break;
-                                    }
-                                }
-                                else
-                                {
-                                    outputText += tempStr;
-                                }
-                            }
-                            continue;
-                        }
-                        else
-                        {
-                            outputText += temp;
-                        }
-                    }
-                   
-                    tempStr = "";
-
+                    lexem temp;
+                    temp.id = l.TokenContents;
+                    temp.type = Convert.ToString(l.Token);
+                    lexemsWhithoutRepeate.Add(temp);
                 }
-                else
-                {
-                    if (tempStr.Length!=0)
-                        if (isSpecialSimbol(tempStr[tempStr.Length - 1])) 
-                            tempStr = "";
-                    tempStr += temp;
-                }
-
             }
-
+            
             return outputText;
         }
+
         public void setTable()
         {
             if (lexemsWhithoutRepeate.Count != 0)
