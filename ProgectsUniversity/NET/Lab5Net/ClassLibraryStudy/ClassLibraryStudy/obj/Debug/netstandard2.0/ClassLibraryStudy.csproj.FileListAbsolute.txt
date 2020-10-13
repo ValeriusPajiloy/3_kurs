@@ -43,3 +43,12 @@ D:\Валера\3_kurs\3_kurs\ProgectsUniversity\Lab5Net\ClassLibraryStudy\Class
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.csproj.CoreCompileInputs.cache
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.dll
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.pdb
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\bin\Debug\netstandard2.0\ClassLibraryStudy.deps.json
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\bin\Debug\netstandard2.0\ClassLibraryStudy.dll
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\bin\Debug\netstandard2.0\ClassLibraryStudy.pdb
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.csprojAssemblyReference.cache
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.AssemblyInfoInputs.cache
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.AssemblyInfo.cs
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.csproj.CoreCompileInputs.cache
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.dll
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab5Net\ClassLibraryStudy\ClassLibraryStudy\obj\Debug\netstandard2.0\ClassLibraryStudy.pdb

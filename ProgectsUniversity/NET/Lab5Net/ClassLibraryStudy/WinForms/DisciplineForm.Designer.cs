@@ -71,6 +71,7 @@
             // 
             // SaveDiscipline
             // 
+            this.SaveDiscipline.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.SaveDiscipline.Location = new System.Drawing.Point(109, 91);
             this.SaveDiscipline.Name = "SaveDiscipline";
             this.SaveDiscipline.Size = new System.Drawing.Size(75, 23);

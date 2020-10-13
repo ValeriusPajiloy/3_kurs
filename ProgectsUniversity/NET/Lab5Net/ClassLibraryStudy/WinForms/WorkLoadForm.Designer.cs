@@ -51,6 +51,7 @@
             // 
             // buttonSaveWorkload
             // 
+            this.buttonSaveWorkload.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSaveWorkload.Location = new System.Drawing.Point(169, 67);
             this.buttonSaveWorkload.Name = "buttonSaveWorkload";
             this.buttonSaveWorkload.Size = new System.Drawing.Size(75, 23);
