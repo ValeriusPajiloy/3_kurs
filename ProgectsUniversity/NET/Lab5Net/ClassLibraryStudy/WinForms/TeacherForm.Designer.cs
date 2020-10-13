@@ -133,6 +133,7 @@
             // 
             // SaveTeacher
             // 
+            this.SaveTeacher.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.SaveTeacher.Location = new System.Drawing.Point(267, 170);
             this.SaveTeacher.Name = "SaveTeacher";
             this.SaveTeacher.Size = new System.Drawing.Size(125, 25);

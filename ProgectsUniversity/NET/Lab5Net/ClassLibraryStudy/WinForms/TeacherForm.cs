@@ -171,8 +171,6 @@ namespace WinForms
             teacher.Degree.degree = textBoxDegree.Text;
             teacher.position = textBoxPosition.Text;
             teacher.exp = (int)numericExp.Value;
-            Close();
-
         }
 
     }

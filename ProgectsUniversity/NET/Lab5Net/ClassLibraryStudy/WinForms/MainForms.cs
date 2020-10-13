@@ -43,13 +43,15 @@ namespace WinForms
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TeacherForm f2 = new TeacherForm();
-            f2.Show();
-            this.teacher = f2.teacher;
-            if(this.teacher.IsValid)
+            if (f2.ShowDialog() == DialogResult.OK)
             {
-                Univer.Teachers.Add(this.teacher.TeacherId, this.teacher);
+                this.teacher = f2.teacher;
+                if (this.teacher.IsValid)
+                {
+                    Univer.Teachers.Add(this.teacher.TeacherId, this.teacher);
+                }
+                updateListTeacher();
             }
-            updateListTeacher();
         }
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,14 +59,17 @@ namespace WinForms
             if (this.teacher != null)
             {
                 TeacherForm f2 = new TeacherForm(this.teacher);
-                f2.Show();
-                this.teacher = f2.teacher;
-                if (this.teacher.IsValid)
+                
+                if(f2.ShowDialog() == DialogResult.OK)
                 {
-                    Univer.Teachers.Remove(this.teacher.TeacherId);
-                    Univer.Teachers.Add(this.teacher.TeacherId, this.teacher);
+                    this.teacher = f2.teacher;
+                    if (this.teacher.IsValid)
+                    {
+                        Univer.Teachers.Remove(this.teacher.TeacherId);
+                        Univer.Teachers.Add(this.teacher.TeacherId, this.teacher);
+                    }
+                    updateListTeacher();
                 }
-                updateListTeacher();
             }
             else
             {
