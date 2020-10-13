@@ -66,11 +66,23 @@ namespace WinForms
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.teacher != null)
+            if (Univer.Teachers.Count != 0)
             {
-                TeacherForm f2 = new TeacherForm(this.teacher);
-                f2.Show();
-                this.teacher = f2.teacher;
+                if (listViewTeachers.SelectedItems.Count == 1)
+                {
+                    Teacher tempTeacher = Univer.Teachers[listViewTeachers.SelectedIndices[0]+1];
+                    TeacherForm f2 = new TeacherForm(tempTeacher);
+                    if (f2.ShowDialog() == DialogResult.OK)
+                    {
+                        if (f2.teacher.IsValid)
+                        {
+                            Teacher temp = f2.teacher;
+                            Univer.Teachers.Remove(temp.TeacherId);
+                            Univer.Teachers.Add(temp.TeacherId, temp);
+                        }
+                    }
+                }
+                updateListTeacher();
             }
             else
             {
@@ -94,12 +106,23 @@ namespace WinForms
 
         private void изменитьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if(this.discipline != null)
+            if (Univer.Disciplines.Count != 0)
             {
-                DisciplineForm f2 = new DisciplineForm(this.discipline);
-                f2.Show();
-                this.discipline = f2.discipline;
-                
+                if (listViewSubject.SelectedItems.Count == 1)
+                {
+                    Discipline tempDiscipline = Univer.Disciplines[listViewTeachers.SelectedIndices[0]];
+                    DisciplineForm f2 = new DisciplineForm(tempDiscipline);
+                    if (f2.ShowDialog() == DialogResult.OK)
+                    {
+                        if (f2.discipline.IsValid)
+                        {
+                            Discipline temp = f2.discipline;
+                            Univer.Disciplines.Remove(temp.DisciplineId);
+                            Univer.Disciplines.Add(temp.DisciplineId, temp);
+                        }
+                    }
+                }
+                updateListTeacher();
             }
             else
             {
