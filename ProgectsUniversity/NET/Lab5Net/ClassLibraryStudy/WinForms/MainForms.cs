@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using ClassLibraryStudy;
 
@@ -9,14 +10,18 @@ namespace WinForms
 
         private Teacher teacher;    
         private Discipline discipline;
-
+        
         public MainForms()
         {
             InitializeComponent();
         }
         void updateListTeacher()
         {
+            listViewTeachers.Items.Clear();
+            foreach (KeyValuePair<int, Teacher> temp in Univer.Teachers)
+            {
 
+            }
         }
         
         void updateListDiscipline()
