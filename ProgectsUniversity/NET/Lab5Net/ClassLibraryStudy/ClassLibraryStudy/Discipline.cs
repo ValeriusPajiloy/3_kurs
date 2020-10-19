@@ -45,10 +45,11 @@
             DisciplineId = NewDisciplineId;
 
         }
-        public Discipline(Subject Name, int countHours)
+        public Discipline(Discipline _discipline)
         {
-            this.Name = Name;
-            this.countHours = countHours;
+            this.Name = _discipline.Name;
+            this.countHours = _discipline.countHours;
+            this.DisciplineId = _discipline.countHours;
         }
 
         public override string ToString()

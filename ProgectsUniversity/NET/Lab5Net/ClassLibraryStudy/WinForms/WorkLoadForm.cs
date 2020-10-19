@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryStudy;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace WinForms
 {
     public partial class WorkLoadForm : Form
     {
+        public Workload workload;
         public WorkLoadForm()
         {
             InitializeComponent();
+        }
+        public WorkLoadForm(Workload _workload)
+        {
+
         }
     }
 }

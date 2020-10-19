@@ -24,7 +24,7 @@ namespace WinForms
             comboBoxSubject.Items.Add(Subject.OOP);
             comboBoxSubject.Items.Add(Subject.Programming);
             comboBoxSubject.Items.Add(Subject.Web);
-            discipline = _discipline;
+            discipline = new Discipline(_discipline);
 
             if (_discipline.IsValid)
             {

@@ -71,15 +71,15 @@
             TeacherId = NewTeacherId;
         }
 
-        public Teacher(string FirstName, string MiddleName, string LastName, scienceDegree Degree, int exp, string position)
+        public Teacher(Teacher _teacher)
         {
-            this.FirstName = FirstName;
-            this.MiddleName = MiddleName;
-            this.LastName = LastName;
-            this.Degree = Degree;
-            this.exp = exp;
-            this.position = position;
-            TeacherId = NewTeacherId;
+            this.FirstName = _teacher.FirstName;
+            this.MiddleName = _teacher.MiddleName;
+            this.LastName = _teacher.LastName;
+            this.Degree = _teacher.Degree;
+            this.exp = _teacher.exp;
+            this.position = _teacher.position;
+            this.TeacherId = _teacher.TeacherId;
 
         }
         public override string ToString()

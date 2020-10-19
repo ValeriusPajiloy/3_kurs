@@ -7,11 +7,13 @@ namespace WinForms
 {
     public partial class TeacherForm : Form
     {
-        public Teacher teacher = new Teacher();
+        public Teacher teacher;
         public TeacherForm()
         {
             InitializeComponent();
            
+            teacher = new Teacher();
+
             comboBoxSubject.Items.Add(Subject.Lenguages);
             comboBoxSubject.Items.Add(Subject.Math);
             comboBoxSubject.Items.Add(Subject.OOP);
@@ -39,6 +41,7 @@ namespace WinForms
 
             if(_teacher.IsValid)
             {
+                teacher = new Teacher(_teacher);
                 textBoxSurname.Text = _teacher.LastName;
                 textBoxName.Text = _teacher.FirstName;
                 textBoxMiddleName.Text = _teacher.MiddleName;
@@ -54,6 +57,8 @@ namespace WinForms
             }
             else
             {
+                teacher = new Teacher();
+
                 textBoxSurname.Text = "Фамилия";
                 textBoxSurname.ForeColor = Color.Gray;
 

@@ -272,14 +272,16 @@
             // добавитьToolStripMenuItem2
             // 
             this.добавитьToolStripMenuItem2.Name = "добавитьToolStripMenuItem2";
-            this.добавитьToolStripMenuItem2.Size = new System.Drawing.Size(128, 22);
+            this.добавитьToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.добавитьToolStripMenuItem2.Text = "Добавить";
+            this.добавитьToolStripMenuItem2.Click += new System.EventHandler(this.добавитьToolStripMenuItem2_Click);
             // 
             // изменитьToolStripMenuItem2
             // 
             this.изменитьToolStripMenuItem2.Name = "изменитьToolStripMenuItem2";
-            this.изменитьToolStripMenuItem2.Size = new System.Drawing.Size(128, 22);
+            this.изменитьToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.изменитьToolStripMenuItem2.Text = "Изменить";
+            this.изменитьToolStripMenuItem2.Click += new System.EventHandler(this.изменитьToolStripMenuItem2_Click);
             // 
             // menuStrip1
             // 

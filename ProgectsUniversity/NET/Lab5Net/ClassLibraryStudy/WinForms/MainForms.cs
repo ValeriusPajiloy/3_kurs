@@ -6,11 +6,7 @@ using ClassLibraryStudy;
 namespace WinForms
 {
     public partial class MainForms : Form
-    {
-
-        private Teacher teacher;    
-        private Discipline discipline;
-        
+    {    
         public MainForms()
         {
             InitializeComponent();
@@ -21,7 +17,7 @@ namespace WinForms
             foreach (KeyValuePair<int, Teacher> temp in Univer.Teachers)
             {
                 Teacher tempTeacher = temp.Value;
-                string FIO = tempTeacher.LastName + tempTeacher.FirstName + tempTeacher.MiddleName;
+                string FIO = tempTeacher.LastName + " " + tempTeacher.FirstName + " " + tempTeacher.MiddleName;
                 ListViewItem tempItem = new ListViewItem(new string[] {FIO, tempTeacher.Degree.ToString(), tempTeacher.exp.ToString(), tempTeacher.position});
                 listViewTeachers.Items.Add(tempItem);
             }
@@ -43,7 +39,7 @@ namespace WinForms
             listViewWorkload.Clear();
             foreach(Workload tempWorkload in Univer.Workloads)
             {
-                string FIO = tempWorkload.teacher.LastName + tempWorkload.teacher.FirstName + tempWorkload.teacher.MiddleName;
+                string FIO = tempWorkload.teacher.LastName + " " + tempWorkload.teacher.FirstName + " " + tempWorkload.teacher.MiddleName;
                 ListViewItem tempItem = new ListViewItem(new string[] { FIO, tempWorkload.discipline.ToString(), tempWorkload.groupName });
                 listViewWorkload.Items.Add(tempItem);
             }
@@ -99,7 +95,7 @@ namespace WinForms
                 {
                     Discipline temp = f2.discipline;
                     Univer.Disciplines.Add(temp.DisciplineId, temp);
-                    updateListTeacher();
+                    updateListDiscipline();
                 }
             }
         }
@@ -110,7 +106,7 @@ namespace WinForms
             {
                 if (listViewSubject.SelectedItems.Count == 1)
                 {
-                    Discipline tempDiscipline = Univer.Disciplines[listViewTeachers.SelectedIndices[0]];
+                    Discipline tempDiscipline = Univer.Disciplines[listViewSubject.SelectedIndices[0]+1];
                     DisciplineForm f2 = new DisciplineForm(tempDiscipline);
                     if (f2.ShowDialog() == DialogResult.OK)
                     {
@@ -122,7 +118,7 @@ namespace WinForms
                         }
                     }
                 }
-                updateListTeacher();
+                updateListDiscipline();
             }
             else
             {
@@ -133,6 +129,45 @@ namespace WinForms
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void добавитьToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            WorkLoadForm f2 = new WorkLoadForm();
+            if (f2.ShowDialog() == DialogResult.OK)
+            {
+                if (f2.workload.IsValid)
+                {
+                    Workload temp = f2.workload;
+                    Univer.Workloads.Add(temp);
+                    updateListWorkLoad();
+                }
+            }
+        }
+
+        private void изменитьToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (Univer.Workloads.Count != 0)
+            {
+                if (listViewWorkload.SelectedItems.Count == 1)
+                {
+                    Workload tempWorkload = Univer.Workloads[listViewWorkload.SelectedIndices[0] + 1];
+                    WorkLoadForm f2 = new WorkLoadForm(tempWorkload);
+                    if (f2.ShowDialog() == DialogResult.OK)
+                    {
+                        if (f2.workload.IsValid)
+                        {
+                            Workload temp = f2.workload;
+                            Univer.Workloads[listViewWorkload.SelectedIndices[0]] = temp;
+                        }
+                    }
+                }
+                updateListDiscipline();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка! Сначала добавьте нагрузку", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
