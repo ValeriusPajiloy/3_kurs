@@ -149,6 +149,8 @@
             this.comboBoxSubject.Name = "comboBoxSubject";
             this.comboBoxSubject.Size = new System.Drawing.Size(174, 21);
             this.comboBoxSubject.TabIndex = 14;
+            this.comboBoxSubject.DropDown += new System.EventHandler(this.comboBoxSubject_DropDown);
+            this.comboBoxSubject.Leave += new System.EventHandler(this.comboBoxSubject_Leave);
             // 
             // TeacherForm
             // 

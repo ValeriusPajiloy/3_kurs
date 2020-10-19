@@ -27,14 +27,16 @@
 
         public Workload()
         {
-
+            this.teacher = new Teacher();
+            this.discipline = new Discipline();
+            this.groupName = "";
         }
 
-        public Workload(Teacher teacher, Discipline discipline, string groupeName)
+        public Workload(Workload _workload)
         {
-            this.teacher = teacher;
-            this.discipline = discipline;
-            this.groupName = groupName;
+            this.teacher = _workload.teacher;
+            this.discipline = _workload.discipline;
+            this.groupName = _workload.groupName;
         }
 
     }

@@ -34,6 +34,9 @@ namespace WinForms
 
             textBoxPosition.Text = "Должность";
             textBoxPosition.ForeColor = Color.Gray;
+
+            comboBoxSubject.Text = "Предмет";
+            comboBoxSubject.ForeColor = Color.Gray;
         }
         public TeacherForm(Teacher _teacher)
         {
@@ -73,6 +76,9 @@ namespace WinForms
 
                 textBoxPosition.Text = "Должность";
                 textBoxPosition.ForeColor = Color.Gray;
+                
+                comboBoxSubject.Text = "Предмет";
+                comboBoxSubject.ForeColor = Color.Gray;
             }
         }
 
@@ -178,5 +184,14 @@ namespace WinForms
             teacher.exp = (int)numericExp.Value;
         }
 
+        private void comboBoxSubject_DropDown(object sender, EventArgs e)
+        {
+            comboBoxSubject.ForeColor = Color.Black;
+        }
+
+        private void comboBoxSubject_Leave(object sender, EventArgs e)
+        {
+           if(comboBoxSubject.Text == "Предмет") comboBoxSubject.ForeColor = Color.Gray;
+        }
     }
 }
