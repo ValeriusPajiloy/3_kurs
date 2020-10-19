@@ -1,0 +1,4 @@
+﻿  ArchLab2.cpp
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\Arch\ArchLab2\ArchLab2\ArchLab2.cpp(24,28): warning C4305: инициализация: усечение из "__int64" в "int"
+D:\Валера\3_kurs\3_kurs\ProgectsUniversity\Arch\ArchLab2\ArchLab2\ArchLab2.cpp(24,16): warning C4309: инициализация: усечение константного значения
+  ArchLab2.vcxproj -> D:\Валера\3_kurs\3_kurs\ProgectsUniversity\Arch\ArchLab2\Debug\ArchLab2.exe

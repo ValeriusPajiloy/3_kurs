@@ -62,6 +62,8 @@ namespace Lab2TAF
             lexemsWhithoutRepeate.Clear();
             string outputText = "";
           
+
+
             var defs = new TokenDefinition[]
             {
                 new TokenDefinition(@"^do$", "OPERATOR LOOP"),
@@ -71,7 +73,8 @@ namespace Lab2TAF
                 new TokenDefinition(@"[-+]?\d+", "INT"),
                 new TokenDefinition(@"#t", "TRUE"),
                 new TokenDefinition(@"#f", "FALSE"),
-                new TokenDefinition(@"[*<>\?\-+/A-Za-z->!]+", "VARIABLE"),
+                new TokenDefinition(@"[*<>\?\-+/->!^%]+", "OPERATOR"),
+                new TokenDefinition(@"[A-Za-z]+", "VARIABLE"),
                 new TokenDefinition(@"\.", "DOT"),
                 new TokenDefinition(@"\(", "LEFT"),
                 new TokenDefinition(@"\)", "RIGHT"),
