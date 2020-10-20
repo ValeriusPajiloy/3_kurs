@@ -36,7 +36,7 @@ namespace WinForms
 
         void updateListWorkLoad()
         {
-            listViewWorkload.Clear();
+            listViewWorkload.Items.Clear();
             foreach(Workload tempWorkload in Univer.Workloads)
             {
                 string FIO = tempWorkload.teacher.LastName + " " + tempWorkload.teacher.FirstName + " " + tempWorkload.teacher.MiddleName;
@@ -151,7 +151,7 @@ namespace WinForms
             {
                 if (listViewWorkload.SelectedItems.Count == 1)
                 {
-                    Workload tempWorkload = Univer.Workloads[listViewWorkload.SelectedIndices[0] + 1];
+                    Workload tempWorkload = Univer.Workloads[listViewWorkload.SelectedIndices[0]];
                     WorkLoadForm f2 = new WorkLoadForm(tempWorkload);
                     if (f2.ShowDialog() == DialogResult.OK)
                     {
@@ -162,7 +162,7 @@ namespace WinForms
                         }
                     }
                 }
-                updateListDiscipline();
+                updateListWorkLoad();
             }
             else
             {

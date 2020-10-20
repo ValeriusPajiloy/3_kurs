@@ -54,7 +54,7 @@
 
         public override string ToString()
         {
-            return $"\tНазвание: {Name}\tКол-во часов: {countHours}";
+            return $"Название: {Name} Кол-во часов: {countHours}";
         }
 
     }

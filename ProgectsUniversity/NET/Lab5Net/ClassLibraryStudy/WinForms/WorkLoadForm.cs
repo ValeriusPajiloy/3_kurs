@@ -42,6 +42,7 @@ namespace WinForms
         }
         public WorkLoadForm(Workload _workload)
         {
+            InitializeComponent();
             this.workload = _workload;
 
 
