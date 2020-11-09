@@ -12,6 +12,7 @@ from Student
 select*
 from Exam
 
+
 --2) Вывести первые 5 записей из таблицы Учащийся.
 select top(5)*
 from Student
