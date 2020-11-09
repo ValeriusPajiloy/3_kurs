@@ -1,5 +1,6 @@
 --Создание БД
 create database Exams
+use Exams;
 --Создание таблиц
 create table EduEstablishment
 (

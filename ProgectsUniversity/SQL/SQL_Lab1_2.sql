@@ -29,7 +29,7 @@ select distinct
 	--(select nameDiscipline from Discipline where ID=disciplineID)as Discipline,
 	--mark as Оценка
 from Exam
-where mark3
+where mark>3
 
 --5) Вывести всех школьников, в фамилии которых есть цифра 5.
 select 
@@ -72,6 +72,7 @@ select
 	(select FIO from Student where ID = StudentID)as Student, 
 	avg(mark) as MiddleMark
 from Exam
+where disciplineID=5
 group by StudentID
 order by StudentID
 
@@ -95,13 +96,12 @@ select MIN(mark)
 from Exam
 where disciplineID=1
 
---15) Найти средний балл по предмету с индексом 5 для каждого учебного заведения. ??????
+--15) Найти средний балл по предмету с индексом 5 для каждого учебного заведения.
 select
-	(select distinct
-		(select nameEstablishment from EduEstablishment where ID=EduEstablishmentID)
-	from Student where ID = StudentID)as Establishment, 
-	avg(mark) as MiddleMark
+	EduEstablishment.nameEstablishment as 'Name',
+	avg(Exam.mark) as MiddleMark
 from Exam
-where disciplineID=5
-group by StudentID
-order by StudentID
+	join Student on Student.ID=Exam.StudentID
+	join EduEstablishment on EduEstablishment.ID=Student.EduEstablishmentID
+where Exam.disciplineID=5
+group by EduEstablishment.nameEstablishment
