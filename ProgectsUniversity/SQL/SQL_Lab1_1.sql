@@ -87,7 +87,7 @@ VALUES ('Ўкола');
 INSERT INTO TypeEstablishment(nameType)
 VALUES ('техникум');
 INSERT INTO TypeEstablishment(nameType)
-VALUES ('колледж');
+VALUES ('олледж');
 
 --Discipline
 INSERT INTO Discipline(nameDiscipline)
