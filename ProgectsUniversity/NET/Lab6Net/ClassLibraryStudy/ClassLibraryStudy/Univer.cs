@@ -124,7 +124,7 @@ namespace ClassLibraryStudy
         /// Информация о нагрузке
         /// </summary>
         /// <param name="workload"></param>
-        public void AddSettlement(Workload workload)
+        public void AddWorkload(Workload workload)
         {
             if (!workload.IsValid)
             {

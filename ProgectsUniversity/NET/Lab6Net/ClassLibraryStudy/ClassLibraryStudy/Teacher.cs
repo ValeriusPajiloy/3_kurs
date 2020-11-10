@@ -82,9 +82,14 @@
             this.TeacherId = _teacher.TeacherId;
 
         }
-        public override string ToString()
+        public new string[] ToString()
         {
-            return $"Фамилия: {LastName}\r\nИмя: {FirstName}\r\nОтчество: {MiddleName}\r\nУченая степень:\r\n{Degree}\r\nСтаж: {exp}\r\nДолжность: {position}\r\n";
+            string[] response = new string[4];
+            response[0] = $"{LastName}\r\n{FirstName}\r\n{MiddleName}\r\n";
+            response[1] = $"{Degree}\r\n";
+            response[2] = $"{exp}\r\n";
+            response[3] = $"{position}\r\n";
+            return response;
         }
     }
 }
