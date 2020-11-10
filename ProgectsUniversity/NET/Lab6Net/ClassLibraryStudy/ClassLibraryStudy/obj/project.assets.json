@@ -180,25 +180,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Valer\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab6Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
+      "projectUniqueName": "D:\\LebedevProject\\3_kurs\\ProgectsUniversity\\NET\\Lab6Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
       "projectName": "ClassLibraryStudy",
-      "projectPath": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab6Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
-      "packagesPath": "C:\\Users\\Valer\\.nuget\\packages\\",
-      "outputPath": "D:\\Валера\\3_kurs\\3_kurs\\ProgectsUniversity\\NET\\Lab6Net\\ClassLibraryStudy\\ClassLibraryStudy\\obj\\",
+      "projectPath": "D:\\LebedevProject\\3_kurs\\ProgectsUniversity\\NET\\Lab6Net\\ClassLibraryStudy\\ClassLibraryStudy\\ClassLibraryStudy.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\LebedevProject\\3_kurs\\ProgectsUniversity\\NET\\Lab6Net\\ClassLibraryStudy\\ClassLibraryStudy\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Valer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -238,7 +233,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

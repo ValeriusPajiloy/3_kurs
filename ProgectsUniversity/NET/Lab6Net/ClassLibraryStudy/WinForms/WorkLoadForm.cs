@@ -13,11 +13,22 @@ namespace WinForms
 {
     public partial class WorkLoadForm : Form
     {
-        public Workload workload;
+        private Workload _workload;
+        public Workload workload
+        {
+            get { return _workload; }
+            set
+            {
+                _workload = value;
+                comboBoxTeacher.SelectedItem = _workload.teacher;
+                comboBoxDiscipline.SelectedItem = _workload.discipline;
+                textBoxGroupeName.Text = _workload.groupName;
+            }
+        }
+        private readonly Univer _univer = Univer.Instance;
         public WorkLoadForm()
         {
             InitializeComponent();
-            workload = new Workload();
 
             textBoxGroupeName.Text = "Название группы";
             textBoxGroupeName.ForeColor = Color.Gray;
@@ -27,45 +38,56 @@ namespace WinForms
 
             comboBoxDiscipline.Text = "Предмет";
             comboBoxDiscipline.ForeColor = Color.Gray;
+            _univer.DisciplineAdded += _univer_DisciplineAdded;
+            _univer.DisciplineRemoved += _univer_DisciplineRemoved;
+            _univer.TeacherAdded += _univer_TeacherAdded;
+            _univer.TeacherRemoved += _univer_TeacherRemoved;
 
-           foreach (var item in Univer.Teachers)
+            foreach (var item in _univer.Teachers)
              {
-                string FIO = item.Value.LastName + " " + item.Value.FirstName[0] + ". " + item.Value.MiddleName[0] + ".";
-                comboBoxTeacher.Items.Add(FIO);
+                comboBoxTeacher.Items.Add(item);
              }
 
-           foreach (var item in Univer.Disciplines)
+           foreach (var item in _univer.Disciplines)
              {
-                comboBoxDiscipline.Items.Add(item.Value.Name);
+                comboBoxDiscipline.Items.Add(item);
              }
            
         }
-        public WorkLoadForm(Workload _workload)
+        private void _univer_DisciplineAdded(object sender, EventArgs e)
         {
-            InitializeComponent();
-            this.workload = _workload;
-
-
-            foreach (var item in Univer.Teachers)
-            {
-                string fio = item.Value.LastName + " " + item.Value.FirstName[0] + ". " + item.Value.MiddleName[0] + ".";
-                comboBoxTeacher.Items.Add(fio);
-            }
-
-            foreach (var item in Univer.Disciplines)
-            {
-                comboBoxDiscipline.Items.Add(item.Value.Name);
-            }
-
-            string FIO = workload.teacher.LastName + " " + workload.teacher.FirstName[0] + ". " + workload.teacher.MiddleName[0] + ".";
-            comboBoxTeacher.SelectedItem = FIO;
-
-            comboBoxDiscipline.SelectedItem = workload.discipline.Name;
-            
-            textBoxGroupeName.Text = workload.groupName;
-
+            comboBoxDiscipline.Items.Add(sender);
         }
-
+        private void _univer_DisciplineRemoved(object sender, EventArgs e)
+        {
+            int key = (int)sender;
+            for (int i = 0; i < comboBoxDiscipline.Items.Count; i++)
+            {
+                var discipline = comboBoxDiscipline.Items[i] as Discipline;
+                if (discipline?.DisciplineId == key)
+                {
+                    comboBoxDiscipline.Items.RemoveAt(i);
+                    break;
+                }
+            }
+        }
+        private void _univer_TeacherAdded(object sender, EventArgs e)
+        {
+            comboBoxTeacher.Items.Add(sender);
+        }
+        private void _univer_TeacherRemoved(object sender, EventArgs e)
+        {
+            int key = (int)sender;
+            for (int i = 0; i < comboBoxTeacher.Items.Count; i++)
+            {
+                var teacher = comboBoxTeacher.Items[i] as Teacher;
+                if (teacher?.TeacherId == key)
+                {
+                    comboBoxTeacher.Items.RemoveAt(i);
+                    break;
+                }
+            }
+        }
         private void comboBoxTeacher_Enter(object sender, EventArgs e)
         {
             comboBoxTeacher.ForeColor = Color.Black;
@@ -107,9 +129,9 @@ namespace WinForms
 
         private void buttonSaveWorkload_Click(object sender, EventArgs e)
         {
-            workload.teacher = Univer.Teachers[comboBoxTeacher.SelectedIndex + 1];
-            workload.discipline = Univer.Disciplines[comboBoxDiscipline.SelectedIndex + 1];
-            workload.groupName = textBoxGroupeName.Text;
+            _workload.teacher = comboBoxTeacher.SelectedItem as Teacher;
+            _workload.discipline = comboBoxDiscipline.SelectedItem as Discipline;
+            _workload.groupName = textBoxGroupeName.Text;
         }
     }
 }

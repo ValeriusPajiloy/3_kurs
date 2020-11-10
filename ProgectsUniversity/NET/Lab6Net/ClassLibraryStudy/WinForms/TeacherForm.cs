@@ -7,7 +7,22 @@ namespace WinForms
 {
     public partial class TeacherForm : Form
     {
-        public Teacher teacher;
+        private Teacher _teacher;
+        public Teacher teacher 
+        {
+            get { return _teacher; }
+            set
+            {
+                _teacher = value;
+                textBoxSurname.Text = teacher.LastName;
+                textBoxName.Text = teacher.FirstName;
+                textBoxMiddleName.Text = teacher.MiddleName;
+                comboBoxSubject.SelectedItem = teacher.Degree.subject;
+                textBoxDegree.Text = teacher.Degree.degree;
+                textBoxPosition.Text = teacher.position;
+                numericExp.Value = teacher.exp;
+            }
+        }
         public TeacherForm()
         {
             InitializeComponent();
@@ -38,49 +53,7 @@ namespace WinForms
             comboBoxSubject.Text = "Предмет";
             comboBoxSubject.ForeColor = Color.Gray;
         }
-        public TeacherForm(Teacher _teacher)
-        {
-            InitializeComponent();
-
-            if(_teacher.IsValid)
-            {
-                teacher = new Teacher(_teacher);
-                textBoxSurname.Text = _teacher.LastName;
-                textBoxName.Text = _teacher.FirstName;
-                textBoxMiddleName.Text = _teacher.MiddleName;
-                comboBoxSubject.Items.Add(Subject.Lenguages);
-                comboBoxSubject.Items.Add(Subject.Math);
-                comboBoxSubject.Items.Add(Subject.OOP);
-                comboBoxSubject.Items.Add(Subject.Programming);
-                comboBoxSubject.Items.Add(Subject.Web);
-                comboBoxSubject.SelectedItem = _teacher.Degree.subject;
-                textBoxDegree.Text = _teacher.Degree.degree;
-                textBoxPosition.Text = _teacher.position;
-                numericExp.Value = _teacher.exp;
-            }
-            else
-            {
-                teacher = new Teacher();
-
-                textBoxSurname.Text = "Фамилия";
-                textBoxSurname.ForeColor = Color.Gray;
-
-                textBoxName.Text = "Имя";
-                textBoxName.ForeColor = Color.Gray;
-
-                textBoxMiddleName.Text = "Отчество";
-                textBoxMiddleName.ForeColor = Color.Gray;
-
-                textBoxDegree.Text = "Степень";
-                textBoxDegree.ForeColor = Color.Gray;
-
-                textBoxPosition.Text = "Должность";
-                textBoxPosition.ForeColor = Color.Gray;
-                
-                comboBoxSubject.Text = "Предмет";
-                comboBoxSubject.ForeColor = Color.Gray;
-            }
-        }
+        
 
         private void textBoxSurname_Enter(object sender, EventArgs e)
         {
@@ -175,13 +148,13 @@ namespace WinForms
 
         private void SaveTeacher_Click(object sender, EventArgs e)
         {
-            teacher.LastName = textBoxSurname.Text;
-            teacher.FirstName = textBoxName.Text;
-            teacher.MiddleName = textBoxMiddleName.Text;
-            if (comboBoxSubject.SelectedValue != null) teacher.Degree.subject = (Subject)comboBoxSubject.SelectedItem;
-            teacher.Degree.degree = textBoxDegree.Text;
-            teacher.position = textBoxPosition.Text;
-            teacher.exp = (int)numericExp.Value;
+            _teacher.LastName = textBoxSurname.Text;
+            _teacher.FirstName = textBoxName.Text;
+            _teacher.MiddleName = textBoxMiddleName.Text;
+            if (comboBoxSubject.SelectedValue != null) _teacher.Degree.subject = (Subject)comboBoxSubject.SelectedItem;
+            _teacher.Degree.degree = textBoxDegree.Text;
+            _teacher.position = textBoxPosition.Text;
+            _teacher.exp = (int)numericExp.Value;
         }
 
         private void comboBoxSubject_DropDown(object sender, EventArgs e)

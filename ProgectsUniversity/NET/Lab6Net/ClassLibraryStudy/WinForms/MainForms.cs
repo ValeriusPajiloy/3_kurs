@@ -6,11 +6,64 @@ using ClassLibraryStudy;
 namespace WinForms
 {
     public partial class MainForms : Form
-    {    
+    {
+        private readonly Univer _univer = Univer.Instance;
+        readonly DisciplineForm _disciplineForm = new DisciplineForm();
+        readonly TeacherForm _teacherForm = new TeacherForm();
+        readonly WorkLoadForm _workLoadForm = new WorkLoadForm();
+
         public MainForms()
         {
             InitializeComponent();
+            _univer.TeacherAdded += _univer_TeacherAdded;
+            _univer.DisciplineAdded += _univer_DisciplineAdded;
+            _univer.WorkloadAdded += _univer_WorkloadAdded;
+            _univer.TeacherRemoved += _univer_TeacherRemoved;
+            _univer.DisciplineRemoved += _univer_DisciplineRemoved;
+            _univer.WorkloadRemoved += _univer_WorkloadRemoved;
         }
+
+        private void _univer_TeacherAdded(object sender, EventArgs e)
+        {
+            var teacher = sender as Teacher;
+            if (teacher != null)
+            {
+                var listViewItem = new ListViewItem
+                {
+                    Tag = teacher,
+                    Text = teacher.ToString()
+                };
+                listViewTeachers.Items.Add(listViewItem);
+            }
+        }
+        private void _univer_DisciplineAdded(object sender, EventArgs e)
+        {
+            var discipline = sender as Discipline;
+            if (discipline != null)
+            {
+                var listViewItem = new ListViewItem
+                {
+                    Tag = discipline,
+                    Text = discipline.ToString()
+                };
+                listViewTeachers.Items.Add(listViewItem);
+            }
+        }
+        private void _univer_WorkloadAdded(object sender, EventArgs e)
+        {
+            var workload = sender as Workload;
+            if (workload != null)
+            {
+                var listViewItem = new ListViewItem
+                {
+                    Tag = workload,
+                    Text = workload.ToString()
+                };
+                listViewTeachers.Items.Add(listViewItem);
+            }
+        }
+
+        private void
         void updateListTeacher()
         {
             listViewTeachers.Items.Clear();
