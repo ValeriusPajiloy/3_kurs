@@ -1,3 +1,4 @@
+use Exams
 --1) ¬ывести все данные из каждой таблицы.
 select*
 from Discipline
