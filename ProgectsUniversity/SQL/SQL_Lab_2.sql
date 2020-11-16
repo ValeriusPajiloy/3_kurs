@@ -51,7 +51,7 @@ join Exam on (Student_CTE.ID = Exam.StudentID)
 where EduEstablishment.typeEstablishmentID = 2
 
 --5. Учащихся, набравших больше 60(>3) баллов по всем экзаменам из учебных заведений, в которых меньше 20 учеников.
-with 
+;with 
 	EduEducutation_CTE as(
 		select distinct
 		EduEstablishmentID, 
@@ -104,17 +104,44 @@ select
 	(select avg(mark)from Exam where disciplineID=Discipline.ID) as 'middle'
 from Discipline
 
---9. Количество учащихся из школ (МБОУ), набравших баллы ниже среднего. - доделать
+--9. Количество учащихся из школ (МБОУ), набравших баллы ниже среднего. 
 ;with 
 	MiddleMark as(
 		select avg(mark) as 'avg' from Exam
 	)
 
-
 select distinct COUNT(*) as 'count'
 from Student
-join Exam on (Exam.StudentID = Student.ID and Exam.mark < avg(mark))--ошибка тут
+cross join MiddleMark
+join Exam on (Exam.StudentID = Student.ID and Exam.mark < MiddleMark.avg)
 join EduEstablishment on (EduEstablishment.ID = Student.EduEstablishmentID)
 where EduEstablishment.typeEstablishmentID = 1
 
+
 --10. Учебные заведения, в которых больше всего учеников набрали баллы ниже среднего для каждого из предметов. 
+;with
+	MiddleMarkDiscipline as (
+		select
+			Discipline.ID as 'ID',
+			Discipline.nameDiscipline as 'nameDiscipline',
+			(select avg(mark)from Exam where disciplineID=Discipline.ID) as 'middle'
+		from Discipline
+	),
+	Temp_Table as(
+		select 
+		EduEstablishment.nameEstablishment as 'Establishment',
+		MiddleMarkDiscipline.nameDiscipline as 'Discipl',
+		count(*) as 'CountStud'
+		from EduEstablishment
+		join Student on (EduEstablishment.ID = Student.EduEstablishmentID)
+		join Exam on (Student.ID = Exam.StudentID)
+		join MiddleMarkDiscipline on (MiddleMarkDiscipline.ID = Exam.disciplineID)
+		where Exam.mark<MiddleMarkDiscipline.middle
+		group by EduEstablishment.nameEstablishment, MiddleMarkDiscipline.nameDiscipline
+	)
+
+select Establishment, Discipl, Max(CountStud)
+from Temp_Table
+group by Establishment, Discipl
+--group by Discipl
+
