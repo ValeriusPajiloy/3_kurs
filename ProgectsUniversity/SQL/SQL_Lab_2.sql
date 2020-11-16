@@ -129,7 +129,7 @@ where EduEstablishment.typeEstablishmentID = 1
 	),
 	Temp_Table as(
 		select 
-		EduEstablishment.nameEstablishment as 'Establishment',
+		EduEstablishment.ID as 'Establishment_ID',
 		MiddleMarkDiscipline.nameDiscipline as 'Discipl',
 		count(*) as 'CountStud'
 		from EduEstablishment
@@ -137,11 +137,11 @@ where EduEstablishment.typeEstablishmentID = 1
 		join Exam on (Student.ID = Exam.StudentID)
 		join MiddleMarkDiscipline on (MiddleMarkDiscipline.ID = Exam.disciplineID)
 		where Exam.mark<MiddleMarkDiscipline.middle
-		group by EduEstablishment.nameEstablishment, MiddleMarkDiscipline.nameDiscipline
+		group by EduEstablishment.ID, MiddleMarkDiscipline.nameDiscipline
 	)
-
-select Establishment, Discipl, Max(CountStud)
+select 
+	(select EduEstablishment.nameEstablishment from EduEstablishment where Temp_Table.Establishment_ID = EduEstablishment.ID) as 'Name Establishment',
+	Temp_Table.Discipl as 'Name Discipline',
+	Max(CountStud) as 'Count Student'
 from Temp_Table
-group by Establishment, Discipl
---group by Discipl
-
+group by Discipl
