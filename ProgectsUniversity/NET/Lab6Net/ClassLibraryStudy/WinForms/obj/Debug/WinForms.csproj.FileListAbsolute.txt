@@ -130,3 +130,9 @@ D:\Валера\3_kurs\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\W
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\obj\Debug\WinForms.csproj.CopyComplete
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\obj\Debug\WinForms.exe
 D:\Валера\3_kurs\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\obj\Debug\WinForms.pdb
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\bin\Debug\WinForms.exe.config
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\bin\Debug\WinForms.exe
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\bin\Debug\WinForms.pdb
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\bin\Debug\ClassLibraryStudy.dll
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\bin\Debug\ClassLibraryStudy.pdb
+D:\LebedevProject\3_kurs\ProgectsUniversity\NET\Lab6Net\ClassLibraryStudy\WinForms\obj\Debug\WinForms.csproj.CopyComplete
