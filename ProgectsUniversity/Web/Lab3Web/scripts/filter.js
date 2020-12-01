@@ -49,6 +49,7 @@ let active_filters = [];
 let current_object =[];
 $(document).ready(function(){
    $(':checkbox').click(function(){
+       console.log("test");
         if ($(this).is(':checked')) {
             active_filters.push($(this).prop('value'));
         }
@@ -118,7 +119,7 @@ function disableBadFilters(num_filters, price_filters, floor_filters) {
         
             let validrooms = rooms.filter(room => match(room, num_filters, price_filters, floor_filters)).map(room => room.id);
             
-            $(`:checkbox[value='${filter}']`).attr('disabled', (validrooms.length == 0)||(isSame(validrooms,current_object)) );
+            $(`:checkbox[value='${filter}']`).attr('disabled', (validrooms.length == 0));
 
             if (filter.endsWith('$')) {
                 price_filters.pop(filter.slice(0, -1));
