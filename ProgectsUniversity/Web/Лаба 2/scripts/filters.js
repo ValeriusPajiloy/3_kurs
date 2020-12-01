@@ -122,13 +122,13 @@ function disableBadFilters(num_filters, price_filters, city_filters) {
             $(`:checkbox[value='${filter}']`).attr('disabled', validHotels.length == 0);
 
             if (filter.endsWith('$')) {
-                price_filters.pop(filter.slice(0, -1));
+                price_filters.pop();
             }
             else if (!isNaN(parseInt(filter))) {
-                num_filters.pop(filter);
+                num_filters.pop();
             }
             else {
-                city_filters.pop(filter);
+                city_filters.pop();
             }
         }
     }

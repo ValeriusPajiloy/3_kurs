@@ -2,13 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link id="stylesheet" rel="stylesheet" href="style.css">
     <script src="scripts/print.js"></script>
+    <script src="scripts/filter.js"></script>
     <title>Bed&Breakfast</title>
-    <link rel="stylesheet" href="style.css">
   </head>
     <body>
         <div id="wrapper">
@@ -34,105 +33,150 @@
                 <img id="picture" src="images/picture.png">
             </div>
             <div id="Layer1">
-                <div id="greeting">
-                
-                    <div id="textGreet">
-                        <h1 id="welcome">Welcome to our Hotel!</h1>
-                
-                        <p><strong>Adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</strong></p>
-                        <p>Nostrud exerci tation ullamcorper suscipit lobortis nisl.</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
-                        vel illum dolore eu feugiat nulla.</p>
-                        <p><a class = "linkShapeColor" href=#>• Facilisis at vero eros et accumsan et iusto odio </a></p> 
-                    </div>
-                
-                    <div id="face">
-                        <img src="images/face.png">     
-                    </div>
-                
-                </div>
-
-                <div id="shape1">
-                    <div id="inRoom">
-                        <h1>In-Room</h1>
-
-                        <img id="roomImg" src="images/room.png">
-                        
-                        <p>
-                            <ul id="inRoomList">
-                                <li>Consectetuer adipiscing elit</li>
-                                <li>Sed diam nonummy nibh</li>                          
-                                <li>Euismod tincidunt  laoreet</li>
-                                <li>Dolore magna aliquam erat</li>
-                                <li>Ut wisi enim ad minim</li>
-                            </ul>    
-                        </p>
-        
-                        <p><a class = "linkShapePosition linkShapeColor" href=#>more <img src="images/arrowsMore.png"> </a></p>
-        
-                    </div>                
-
-                    <div class="verticalLine">
-                        <img src= "images/verticalLine.png">
-                    </div>
-
-                    <div id="ourServices">
-                        <h1>Our Services</h1>
-                        
-                        <img id="serviceImg" src="images/service.png">
-                        
-                        <p><strong>Sed diam nonummy nibh euismod tincidunt</strong></p>
-                        <p>Exerci tation ullamcorper suscipit lobortis nisl duis autem vel eum iriure dolor 
-                        in hendrerit in vulputate velit.</p>
-
-                        <p><a class = "linkShapePosition linkShapeColor" href=#>more <img src="images/arrowsMore.png"></a></p>
-                    </div>
-                </div>
-
-                <div id="shape2">
-                    <div id="newsAndEvents">
-                        <h1>News&Events</h1>
-                        
-                        <div id="textNews">
-                            <div id="textWithImage">
-                                <div id="someImg">
-                                    <img src="images/some.png">
+                <div id="choosing">
+                    <h1 id="welcome">Choose your option</h1>
+                    
+                    <div id="smart_filter">
+                        <div class="filter">
+                            <label class="name_filter">
+                                Number of people
+                            </label>
+                            <div class="my_checkbox">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1">
+                                    <label class="form-check-label">
+                                        1
+                                    </label>
                                 </div>
-                                
-                                <div id="textNewsNearPic">
-                                    <p class= "greenText" id="dataNews">31,June 2007</p>
-                                    <p><strong>Sed diam</strong> nonummy nibh euismod tincidunt ut laoreet dolore.</p>    
-                                </div>    
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="2">
+                                    <label class="form-check-label">
+                                        2
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="3">
+                                    <label class="form-check-label">
+                                        3
+                                    </label>
+                                </div>
                             </div>
-                            
-                            
-                            <p>Nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. </p>
-                        
-                            <p ><a class = "linkShapePosition linkShapeColor" href=#>more events <img src="images/arrowsMore.png"></a></p>
+                        </div>
+                        <div class="filter">
+                            <label class="name_filter">
+                                Price
+                            </label>
+                            <div class="my_checkbox">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="50$">
+                                    <label class="form-check-label">
+                                        50$
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="100$">
+                                    <label class="form-check-label">
+                                        100$
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="150$">
+                                    <label class="form-check-label">
+                                        150$
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter">
+                            <label class="name_filter">
+                                Floor
+                            </label>
+                            <div class="my_checkbox">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="first_floor">
+                                    <label class="form-check-label">
+                                        1 floor
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="second_floor">
+                                    <label class="form-check-label">
+                                        2 floor
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="third_floor">
+                                    <label class="form-check-label">
+                                        3 floor
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-    
-                    <div class="verticalLine secondLine">
-                        <img src= "images/verticalSecondLine.png">
+                </div>
+
+                <div id="content" >
+                    <div class="room" id="room_1">
+                        <img src="images/Room_1.jpg" class="fon">
+                        <h1 class="title">
+                            Business room
+                        </h1>
+                        <p>
+                            Nice and cheap room
+                            (Capacity - 1, 1 floor , Price - 50$)
+                        </p>
                     </div>
-
-                    <div id="ourLocation">
-                        <h1>Our Location</h1>
-    
-                        <div id="Addres">
-                            <p class= "greenText" id="nameCountry">New-York. USA</p>
-                            <p>11 Some Street Second Floor</p>
-                            <p>New York WA 02020</p>
-                            <p>Tel/Fax 1(800)123-4567</p>
-                            <p>E-mail : <a class = "linkShapeColor" href=#>info@yourcompany.com</a></p>
-                        </div>    
-                    </div>    
+                    <div class="room" id="room_2">
+                        <img src="images/Room_2.jpg" class="fon">
+                        <h1 class="title">
+                            Double business room
+                        </h1>
+                        <p>
+                            Nice and cheap room
+                            (Capacity - 2, 1 floor , Price - 100$)
+                        </p>
+                    </div>
+                    <div class="room" id="room_3">
+                        <img src="images/Room_3.jpg" class="fon">
+                        <h1 class="title">
+                            Comfort room
+                        </h1>
+                        <p>
+                            Wery nice room
+                            (Capacity - 1, 2 floor , Price - 100$)
+                        </p>
+                    </div>
+                    <div class="room" id="room_4">
+                        <img src="images/Room_4.jpg" class="fon">
+                        <h1 class="title">
+                            Comfort room with balcony
+                        </h1>
+                        <p>
+                            Wery nice room with balcony
+                            (Capacity - 1, 2 floor , Price - 100$)
+                        </p>
+                    </div>
+                    <div class="room" id="room_5">
+                        <img src="images/Room_5.jpg" class="fon">
+                        <h1 class="title">
+                            Double comfort room
+                        </h1>
+                        <p>
+                            Wery nice room for 2 people
+                            (Capacity - 2, 3 floor , Price - 150$)
+                        </p>
+                    </div>
+                    <div class="room" id="room_6">
+                        <img src="images/Room_6.jpg" class="fon">
+                        <h1 class="title">
+                            Family comfort room with balcony
+                        </h1>
+                        <p>
+                            Wery nice room with balcony
+                            (Capacity - 3, 3 floor , Price - 150$)
+                        </p>
+                    </div>
                 </div>
-
-                <div id="shape3">
-                    <p>Copyright © 2007 Bed&Breakfast. All Rights Reserved. <a href="#">Term of Use</a> / <a href="#">Privacy Policy</a></p>
-                </div>
-
             </div>
 
         </div>    

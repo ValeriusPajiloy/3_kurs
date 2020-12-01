@@ -14,3 +14,27 @@ img{
 .linkShapePosition{
     display: none;
 }
+#greeting{
+    text-align: center;
+    width: 506px;
+    margin: 0 auto;
+}
+.shape{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+}
+.inShape{
+    width: 400px;
+    margin: 0 auto;
+}
+#shape3{
+    width: 410px;
+}
+#wrapper{
+    margin: 0 auto;
+    width: 1000px;
+}
+#choosing{
+    display: none;
+}
