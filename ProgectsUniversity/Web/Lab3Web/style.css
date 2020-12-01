@@ -1,0 +1,225 @@
+@font-face {
+    font-family: Zurich; /* Гарнитура шрифта */
+    src: url(fonts/zurich-condensed-italic-bt.ttf); /* Путь к файлу со шрифтом */
+}
+#Layer1{
+    position: relative;
+    width: 487px;
+    height: 700px;
+    float: right;
+    background-color: #fffcf3;
+}
+#Layer2{
+    width: 279px;
+    height: 700px;
+    float: left;
+    background-color: #1d75e6;
+    text-align: left;
+}
+h1{
+    color: #0261db;
+    font-family: Zurich;
+    font-size: 18px;
+    font-weight: 400;
+}
+p{
+    color: #6c6c6c;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+#picture{
+    width: 279px;
+    height: 443px;
+    margin-top: 103px;
+}
+#logo{
+    width: 210px;
+    margin:0 auto;
+    margin-top: 91px;
+}
+.print_button {
+    background-color: #1d75e6;
+    border: none;
+    color: #fffcf3;
+    font-family: Zurich;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer
+}
+#menu{
+    width: 101px;
+    margin: 0 auto;
+    margin-top: 59px;
+    padding-left: 22px;
+}
+#logoName{
+    width: 210px;
+    height: 2px;
+    color: #fffcf3;
+    font-family: Zurich;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+#logoPhrase{
+    margin:0 auto;
+    text-align: center;
+    width: 145px;
+    height: 5px;
+    color: #fffcf3;
+    font-family: sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+}
+#logoUnderName{
+    height: 1px;
+}
+.links{
+    color: #fffcf3;
+    font-family: Zurich;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+#welcome{
+    margin: 0px;
+    padding-bottom: 18px;
+}
+#greeting{
+    width: 457px;
+    height: 140px;  
+    margin-left: 30px;
+    margin-top: 41px;
+}
+#face{
+    width: 113px;
+    height: 134px;
+    float: right;
+    padding-left: 17px;
+    padding-right: 38px;
+    padding-top: 6px;
+}
+#textGreet{
+    width: 289px;
+    line-height: 10px;
+    float: left;
+}
+#wrapper{
+    width: 766px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 0 10px #a09f9c;
+}
+#shape1{
+    width: 465px;
+    height: 259px;
+    border: 1px solid #dcd4bf;
+    background-color: #fff8e5;
+    margin:0 auto;
+}
+#inRoomList{
+    padding-left: 7%;
+    font-size: 11px;
+    color: #6c6c6c;
+    font-family: Tahoma;
+}
+#ourServices{
+    position: relative;
+    float: right;
+    width: 194px;
+    height: 261px;
+    padding-right: 19px;
+}
+#inRoom{
+    position: relative;
+    float: left;
+    width: 194px;
+    height: 261px;
+    padding-left: 19px;
+}
+#shape2{
+    width: 465px;
+    height: 210px;
+
+    margin:0 auto;
+}
+#newsAndEvents{
+    position: relative;
+    float: left;
+    width: 194px;
+    height: 210px;
+    padding-left: 19px;
+    padding-right: 20px;
+    margin-top: 8px;
+}
+#ourLocation{
+    position: relative;
+    float: left;
+    width: 194px;
+    padding-left: 19px;
+}
+
+#textNews{
+    padding-left: 6px;
+}
+
+#someImg{
+    float: left;
+    width: 80px;
+    height: 79px;
+    margin-bottom: 0px;
+}
+
+#textNewsNearPic{
+    float: right;
+    width: 100px;
+    margin-bottom: 0px;
+}
+#data{
+    margin-bottom: 6px;
+}
+#textWithImage{
+    margin-bottom: 10px;
+    height: 79px;
+}
+.linkShapeColor{
+    color: #01980f !important;
+}
+.linkShapePosition{
+    position: absolute;
+    bottom: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.verticalLine{
+    position: absolute;
+    left: 50%;
+    margin-top: 4.52%;
+    height: 214px;
+}
+
+#Addres{
+    background-image: url(images/backPictureOurLocation.png);
+    padding-left: 21px;
+}
+
+.greenText{
+    color:#01980f;
+    font-weight: bold;
+}
+#shape3{
+    width: 487px;
+    color: #777777;
+    text-align: center;
+    float: left;
+}

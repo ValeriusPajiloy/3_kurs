@@ -1,0 +1,16 @@
+#Layer2{
+    display: none;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    color: black;
+    line-height: 1.6;
+}
+img{
+    display: none;
+}
+.linkShapePosition{
+    display: none;
+}

@@ -1,0 +1,502 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    color: #606060;
+    line-height: 1.6;
+}
+
+.print_button {
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    color: #666666;
+    margin-bottom: 7px;
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-size: 13.2px;
+    text-align: center;
+}
+
+.print_button:hover {
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 13.2px;
+    text-align: center;
+}
+
+.container h1 {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 31.2px;
+    color: #666666;
+    margin: 0 0;
+    vertical-align: text-bottom;
+    margin-right: 50px;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.menu {
+    color: #666666;
+    display: inline-block;
+    margin-bottom: 7px;
+    margin-top: 0px;
+}
+
+.menu li {
+    float: left;
+    display: block;
+    margin-right: 35px;
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    width: 190px;
+    top: 20px;
+    right: 0;
+    background-color: wheat;
+    text-align: left;
+    padding: 0;
+    border: 1px solid white;
+}
+
+.submenu > li {
+    display: block;
+}
+
+.menu > li:hover > .submenu {
+    display: block;
+}
+
+.login_button {
+    width: 100px;
+    height: 40px;
+    background-color: #bcda5c;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+.login_button p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.banner {
+    background: url("img/Building.PNG")
+    no-repeat
+    center
+    top / cover;
+    width: 100%;
+    height: 572px;
+    background-size: cover;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    padding-top: 130px;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.content h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.become_button {
+    font-size: 21px;
+    background-color: #99c50a;
+    border-radius: 9px;
+    width: 253px;
+    height: 73px;
+    margin: 0 auto;
+}
+
+.become_button p {
+    padding-top: 18px;
+}
+
+.content_1 {
+    text-align: center;
+}
+
+.image_1 {
+    margin-top: 90px;
+}
+
+.content_1 h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #515151;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.content_1 p {
+    width: 1000px;
+    font-size: 20px;
+    color: #838383;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.tabs {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 20px;
+}
+
+.tab {
+    text-align: center;
+    position: relative;
+}
+
+.digit.active {
+    background-color: #add136;
+    padding: 0;
+    line-height: 35px;
+}
+
+.tab.active:after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: #add136;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    z-index: 1;
+}
+
+.digit {
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    background-color: #5f5f5f;
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 15px;
+    line-height: 35px;
+}
+
+.tab span {
+    vertical-align: middle;
+    font-size: 33px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+}
+
+.glasses {
+    float: left;
+    margin-left: 250px;
+    margin-right: 100px;
+}
+
+.section_content {
+    margin-top: 100px;
+}
+
+.section_content h1 {
+    font-size: 26px;
+    color: #add136;
+    float: right;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-right: 310px;
+}
+
+.section_content span {
+    font-size: 17px;
+    color: #606060;
+    text-align: left;
+    margin-top: 60px;
+    margin-right: 170px;
+    line-height: 2;
+}
+
+.find_properties {
+    margin-top: 87px;
+    width: 50%;
+    height: 300px;
+    background-color: #e2f8ff;
+    margin-bottom: 50px;
+}
+
+.finds {
+    margin-bottom: 80px;
+}
+
+.finds h1 {
+    display: inline-block;
+    font-size: 23px;
+    color: #515151;
+    margin-top: 35px;
+}
+
+.finds p {
+    margin-right: 80px;
+    margin-top: 20px;
+    font-size: 17px;
+    color: #6e7274;
+}
+
+.left_img {
+    float: left;
+    margin-top: 85px;
+    margin-left: 140px;
+    margin-bottom: 100px;
+    margin-right: 40px;
+}
+
+.member_button {
+    border-radius: 7px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    font-size: 15px;
+    width: 190px;
+    height: 55px;
+    background-color: #26a6d1;
+    color: white;
+    line-height: 55px;
+    text-transform: capitalize;
+}
+
+.find_buyers {
+    position: absolute;
+    top: 1707px;
+    left: 674px;
+    display: inline-block;
+    width: 50%;
+    height: 300px;
+    background-color: #f5f9eb;
+    margin-bottom: 50px;
+}
+
+.project_button {
+    border-radius: 7px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    font-size: 15px;
+    width: 190px;
+    height: 55px;
+    background-color: #add136;
+    color: white;
+    line-height: 55px;
+    text-transform: capitalize;
+}
+
+.content_2 {
+    width: 990px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.content_2 h1 {
+    font-size: 29px;
+    text-transform: capitalize;
+    color: #515151;
+    text-align: left;
+    width: 680px;
+}
+
+.content_2 h2 {
+    font-size: 17px;
+    color: #8f8f8f;
+    text-align: left;
+    width: 680px;
+}
+
+.transparent_button {
+    font-size: 15px;
+    color: #8f8f8f;
+    background: transparent;
+    border: 1px solid #8f8f8f;
+    position: absolute;
+    bottom: 40px;
+    left: 820px;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.projects {
+    margin-left: 130px;
+}
+
+.project {
+    text-align: left;
+    float: left;
+    position: relative;
+    background-color: #f9f9f9;
+    width: 300px;
+    height: 380px;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+}
+
+.fon {
+    position: absolute;
+    top: 0;
+}
+
+.project h1 {
+    margin-top: 250px;
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #484848;
+}
+
+.project p {
+    margin-left: 20px;
+    font-size: 13px;
+    color: #8c8c8c;
+}
+
+.project span {
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #a3a3a3;
+    font-weight: bold;
+}
+
+.begin {
+    float: left;
+}
+
+.end {
+    float: right;
+    margin-right: 25px;
+}
+
+.project h2 {
+    text-transform: capitalize;
+    margin-left: 20px;
+    font-size: 15px;
+    color: #848484;
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    float: right;
+    margin-right: 50px;
+}
+
+.progress {
+    margin: 0 auto;
+    margin-left: 20px;
+    border-bottom: 2px solid #d6d6d6;
+}
+
+.triangle {
+    position: absolute;
+    bottom: 17px;
+    left: 260px
+}
+
+.content_3 {
+    background: url("img/Fon_river.PNG")
+    no-repeat
+    center
+    top / cover;
+    top: 0;
+    width: 100%;
+    height: 561px;
+    text-align: center;
+    margin-top: 950px;
+    position: relative;
+}
+
+.content_3 h1 {
+    margin-top: 40px;
+    font-size: 39px;
+    color: #9ec02d;
+}
+
+.content_3 h2 {
+    width: 922px;
+    margin: 0 auto;
+    font-size: 19px;
+    color: #bebebe;
+}
+
+.review_1 {
+    position: absolute;
+    width: 330px;
+    height: 120px;
+    top: 260px;
+    left: 220px;
+}
+
+.review_2 {
+    position: absolute;
+    width: 330px;
+    height: 120px;
+    top: 260px;
+    left: 800px;
+}
+
+.content_3 h3 {
+    font-size: 21px;
+    color: #9ec02d;
+}
+
+.content_3 p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #bebebe;
+}
+
+.company {
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #848484;
+    border-top: 2px solid #ededed;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

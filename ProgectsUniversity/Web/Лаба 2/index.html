@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link id="stylesheet" rel="stylesheet" href="style.css">
+    <script src="scripts/print.js"></script>
+    <script src="scripts/filters.js"></script>
+    <title>CROWDME</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img/Logo.PNG" class="logo">
+            <h1>
+                CROWDME
+            </h1>
+            <ul class="menu">
+                <li>
+                    home
+                </li>
+                <li>
+                    how it works
+                </li>
+                <li>                    
+                    number of persons
+                    <ul class="submenu">
+                        <li><input type="checkbox" value="1">1</li>
+                        <li><input type="checkbox" value="2">2</li>
+                        <li><input type="checkbox" value="3">3</li>
+                    </ul>
+                </li>
+                <li>
+                    price
+                    <ul class="submenu">
+                        <li><input type="checkbox" value="100$">100$ per night</li>
+                        <li><input type="checkbox" value="200$">200$ per night</li>
+                        <li><input type="checkbox" value="500$">500$ per night</li>
+                    </ul>
+                </li>
+                <li>
+                    city
+                    <ul class="submenu">
+                        <li><input type="checkbox" value="New York">new york</li>
+                        <li><input type="checkbox" value="Boston">boston</li>
+                        <li><input type="checkbox" value="Denver">denver</li>
+                    </ul>
+                </li>
+                <li>
+                    <button onclick="switchStyleSheet('style.css', 'print.css')" class="print_button">
+                        print
+                    </button>                                    
+                </li>
+            </ul>
+            <div class="login_button">
+                <p>
+                    login
+                </p>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="banner">            
+            <div class="content">
+                <h1>
+                    Intellectual Property has the Shelf Life
+                </h1>
+                <h2>
+                    of a Banana.
+                </h2>
+                <div class="become_button">
+                    <p>
+                        Become a Member
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="content_1">
+            <img src="img/Image_1.PNG" class="image_1">
+            <h1>
+                Our work is the presentation 
+                of our capabilities.
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            </p>
+            <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="tabs">
+            <div class="tab active">
+                <div class="digit active">
+                    1
+                </div>
+                <span>
+                    Simple
+                </span>
+            </div>
+            <div class="tab">
+                <div class="digit">
+                    2
+                </div>
+                <span>
+                    Transparent
+                </span>
+            </div>
+            <div class="tab">
+                <div class="digit">
+                    3
+                </div>
+                <span>
+                    Collabirative
+                </span>
+            </div>
+        </div>
+        <div class="section_content">
+            <img src="img/Glasses.png" class="glasses">                   
+            <h1>
+                Browse projects, like booking a hotel online !
+            </h1>
+            <span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et do lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>   
+        </div>
+    </section>
+    <section class="finds">
+        <div class="find_properties">
+            <img src="img/Sofa.PNG" class="left_img">
+            <h1>
+                Find Properties
+            </h1>
+            <p>
+                Sign up to browse the portfolio.
+                Your journey to becoming a real estate baron stats here.
+            </p>
+            <div class="member_button">
+                Become a Member
+            </div>
+        </div>
+        <div class="find_buyers">
+            <img src="img/Money.PNG" class="left_img">
+            <h1>
+                Find Buyers
+            </h1>
+            <p>
+                Sign up to browse the portfolio.
+                Your journey to becoming a real estate baron stats here.
+            </p>
+            <div class="project_button">
+                submit your project
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="content_2">
+            <h1>
+                Featured Projects
+            </h1>
+            <h2>
+                Brief details of new and popular projects. To view full listings, you will be required to
+                sign up and become a member.
+            </h2>
+            <div class="transparent_button">
+                Become a Member
+            </div>
+        </div>
+        <div class="projects">
+            <div class="project" id="hotel_1">
+                <img src="img/Hotel_1.jpg" class="fon">
+                <h1 class="title">
+                    The Williamsburg Hotel
+                </h1>
+                <p>
+                    The Right Side Of The River
+                    (Capacity - 1, City - New York, Price - 100$)
+                </p>
+            </div>
+            <div class="project" id="hotel_2">
+                <img src="img/Hotel_2.jpeg" class="fon">
+                <h1 class="title">
+                    AC Hotel New York Times Square
+                </h1>
+                <p>
+                    A Brooklyn Centric Hotel
+                    (Capacity - 2, City - New York, Price - 100$)
+                </p>
+            </div>
+            <div class="project" id="hotel_3">
+                <img src="img/Hotel_3.jpg" class="fon">
+                <h1 class="title">
+                    Shefah Hotel
+                </h1>
+                <p>
+                    We're located minutes from Times Square, Downtown Jersey City, and Hoboken.
+                    (Capacity - 3, City - New York, Price - 500$)
+                </p>
+            </div>
+            <div class="project" id="hotel_4">
+                <img src="img/Hotel_4.jpg" class="fon">
+                <h1 class="title">
+                    Colonial Traveler
+                </h1>
+                <p>
+                    Free continental breakfast at the motels guest only coffee shop. Fresh hot coffee, milk, juice, cereal, muffins, and assorted breads.
+                    (Capacity - 1, City - Boston, Price - 100$)
+                </p>
+            </div>
+            <div class="project" id="hotel_5">
+                <img src="img/Hotel_5.jpg" class="fon">
+                <h1 class="title">
+                    Radisson Hotel Boston
+                </h1>
+                <p>                    
+                    This is a family-run hotel where rooms are equipped with flat screen TVs.
+                    (Capacity - 2, City - Boston, Price - 200$)
+                </p>
+            </div>
+            <div class="project" id="hotel_6">
+                <img src="img/Hotel_6.jpg" class="fon">
+                <h1 class="title">
+                    Murphy's Resort
+                </h1>
+                <p>                    
+                    Roadblocks have been lifted and travelers are welcome! We are now open and taking reservations.
+                    (Capacity - 2, City - Denver, Price - 500$)
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="content_3">
+            <h1>
+                Be Part of a Growing International Community
+            </h1>
+            <h2>
+                One of the challenges in networking is everybody thinks it's making cold calls to strangers. Actually, it's the people who already have strong trust relationships with you
+            </h2>
+            <div class="review_1">
+                <h3>
+                    One of the Best 
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod taempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="review_2">
+                <h3>
+                    Exellent Service
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod taempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <img src="img/Company.PNG" class="company">
+        <div class="copyright">
+            Copyright © 2001 - 2014  Cssauthor.com
+        </div>
+    </footer>
+</body>
+</html>
